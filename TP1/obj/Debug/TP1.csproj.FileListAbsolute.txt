@@ -1,0 +1,4 @@
+D:\UNIVERSIDAD\TECNICATURA WEB\programacionWeb3\primerCuatrimestre2015\TP1-ASPNET\TP1\TP1\bin\TP1.dll
+D:\UNIVERSIDAD\TECNICATURA WEB\programacionWeb3\primerCuatrimestre2015\TP1-ASPNET\TP1\TP1\bin\TP1.pdb
+D:\UNIVERSIDAD\TECNICATURA WEB\programacionWeb3\primerCuatrimestre2015\TP1-ASPNET\TP1\TP1\obj\Debug\TP1.dll
+D:\UNIVERSIDAD\TECNICATURA WEB\programacionWeb3\primerCuatrimestre2015\TP1-ASPNET\TP1\TP1\obj\Debug\TP1.pdb
