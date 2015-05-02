@@ -5,47 +5,17 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Equipos</title>
-    <link href="../Styles/sticky-footer-navbar.css" rel="stylesheet" type="text/css" />
     <link href="../Styles/generales.css" rel="stylesheet" type="text/css" />
     <link href="../dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
-    <form id="form1" runat="server">
-    <div>
-        <!-- Fixed navbar -->
-        <nav class="navbar navbar-default navbar-fixed-top">
-          <div class="container">
-            <div class="navbar-header">
-              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="#">Por Siempre F&uacute;tbol</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="#">Listado</a></li>
-                <li class="dropdown"><a href="Contacto.aspx">Contacto</a></li>
-                <li class="dropdown"><a href="../Index.aspx">Inicio</a></li>
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div>
-        </nav>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-        <footer class="footer">
-            <div class="container">
-                <p class="text-muted"><b:ucPie ID="pie" runat="server" /></p>
-            </div>
-        </footer>
-    </div>
-    </form>
-        <!-- Placed at the end of the document so the pages load faster -->
+    
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <b:ucPie ID="pie" runat="server" />
+    <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
 </body>

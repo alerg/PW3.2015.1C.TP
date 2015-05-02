@@ -5,20 +5,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Siempre Fútbol</title>
-    <link href="Styles/sticky-footer-navbar.css" rel="stylesheet" type="text/css" />
     <link href="Styles/generales.css" rel="stylesheet" type="text/css" />
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
     <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
     </asp:ContentPlaceHolder>
-    <footer class="footer">
-        <div class="container">
-            <p class="text-muted"><b:ucPie ID="pie" runat="server" /></p>
-        </div>
-    </footer>
+    <b:ucPie ID="pie" runat="server" />
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
