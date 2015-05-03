@@ -7,6 +7,7 @@
     <title>Siempre Fútbol</title>
     <link href="Styles/generales.css" rel="stylesheet" type="text/css" />
     <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/sticky-footer-navbar.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
