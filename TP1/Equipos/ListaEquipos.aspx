@@ -2,4 +2,6 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <a href="/Equipos/Equipos.aspx">Agregar Equipo</a>
+    <a href="/Equipos/Jugadores.aspx">Agregar Jugadores</a>
 </asp:Content>

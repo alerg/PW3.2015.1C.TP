@@ -5,9 +5,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Siempre Fútbol</title>
-    <link href="Styles/generales.css" rel="stylesheet" type="text/css" />
-    <link href="dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="/Styles/sticky-footer-navbar.css" rel="stylesheet" type="text/css" />
+    <link href="/Styles/generales.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>

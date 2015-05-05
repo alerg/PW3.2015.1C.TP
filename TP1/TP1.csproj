@@ -56,6 +56,8 @@
     <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="dist\js\bootstrap.min.js" />
     <Content Include="Equipos\Contacto.aspx" />
+    <Content Include="Equipos\Equipos.aspx" />
+    <Content Include="Equipos\Jugadores.aspx" />
     <Content Include="Imagenes\fondo.jpg" />
     <Content Include="Imagenes\logo.jpg" />
     <Content Include="Index.aspx" />
@@ -65,6 +67,7 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\validate.js" />
     <Content Include="Styles\generales.css" />
     <Content Include="Styles\sticky-footer-navbar.css" />
     <Content Include="ucFooter.ascx" />
@@ -84,12 +87,12 @@
     <Compile Include="Equipos\Contacto.aspx.designer.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Equipos\Equipos.Master.cs">
-      <DependentUpon>Equipos.Master</DependentUpon>
+    <Compile Include="Equipos\Equipos.aspx.cs">
+      <DependentUpon>Equipos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Equipos\Equipos.Master.designer.cs">
-      <DependentUpon>Equipos.Master</DependentUpon>
+    <Compile Include="Equipos\Equipos.aspx.designer.cs">
+      <DependentUpon>Equipos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equipos\EquiposNested.master.cs">
       <DependentUpon>EquiposNested.master</DependentUpon>
@@ -97,6 +100,13 @@
     </Compile>
     <Compile Include="Equipos\EquiposNested.master.designer.cs">
       <DependentUpon>EquiposNested.master</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\Jugadores.aspx.cs">
+      <DependentUpon>Jugadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equipos\Jugadores.aspx.designer.cs">
+      <DependentUpon>Jugadores.aspx</DependentUpon>
     </Compile>
     <Compile Include="Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
@@ -134,9 +144,6 @@
     <Compile Include="ucFooter.ascx.designer.cs">
       <DependentUpon>ucFooter.ascx</DependentUpon>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Equipos\Equipos.Master" />
   </ItemGroup>
   <ItemGroup>
     <None Include="dist\css\bootstrap-theme.css.map" />

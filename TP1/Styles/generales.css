@@ -1,4 +1,30 @@
-﻿.centroBoton
+﻿
+img.jugador
+{
+    height:400px;
+    padding-left:200px;
+}
+
+.pasto
+{
+    background-image:url("/Imagenes/pasto.png");
+    height:400px;
+}
+
+div.formJugadores
+{
+  border-style  : groove;
+  border-radius: 10px;
+  padding-top: 40px;
+}
+
+
+div.jugadoresContainer
+{
+    height:400px;
+}
+
+.centroBoton
 {
     position: absolute;
     top:50%;
