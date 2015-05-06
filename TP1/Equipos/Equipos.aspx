@@ -8,14 +8,14 @@
             <label for="InputName">Nombre de Equipo</label>
             <div class="input-group">
                 <asp:TextBox ID="txtName" placeholder="Ingrese Nombre" class="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator1" EnableClientScript=true runat="server" ErrorMessage="El Nombre Completo es obligatorio" ControlToValidate="txtName"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator1" EnableClientScript="true" runat="server" ErrorMessage="El Nombre Completo es obligatorio" ControlToValidate="txtName"></asp:RequiredFieldValidator>
             </div>
           </div>
           <div class="form-group">
             <label for="InputEmail">Torneo</label>
             <div class="input-group">
                 <asp:TextBox ID="txtEmail" placeholder="Ingrese Email" class="form-control" runat="server"></asp:TextBox>
-                <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator2" EnableClientScript=true runat="server" ErrorMessage="El email es obligatorio" ControlToValidate="txtEmail" >
+                <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator2" EnableClientScript="true" runat="server" ErrorMessage="El email es obligatorio" ControlToValidate="txtEmail" >
                 </asp:RequiredFieldValidator>
             </div>
           </div>
