@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row jugadoresContainer">
         <div class="col-md-6 pasto">
-            <div class="container-fluid formJugadores">
+            <div class="container-fluid formulario">
             <form runat="server" class="form-horizontal" action="">
               <div class="form-group">
                 <label for="txtNombre" class="col-sm-2 control-label">Nombre</label>
