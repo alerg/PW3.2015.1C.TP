@@ -14,7 +14,7 @@
     <div class="logoCentro"><img alt="Por siempre futbol" src="Imagenes/logo.png" /></div>
     <div class="centroBoton">
         <asp:Button ID="btnListados" runat="server" Text="Equipos" CssClass="btnInicio" 
-            onclick="btnListados_Click" />
+            onclick="btnListados_Click" BorderStyle="Outset" />
         <asp:Button ID="btnAdmin" runat="server" Text="Administración" CssClass="btnInicio" />
     </div>
     </form>

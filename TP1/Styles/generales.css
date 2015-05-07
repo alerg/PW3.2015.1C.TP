@@ -1,16 +1,16 @@
 ﻿html {
   position: relative;
-  min-height: 50%;
+  min-height: 100%;
 }
 body {
   /* Margin bottom by footer height */
   margin-bottom: 60px;
-      background-image: url("../Imagenes/pasto.png");
+      /*background-image: url("../Imagenes/pasto.png");
     background-repeat:no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
-    background-size: 100%;
+    background-size: 100%;*/
 }
 .footer {
   position: absolute;
@@ -27,7 +27,12 @@ body {
 /* Not required for template or sticky footer method. */
 
 body > .container {
-  padding: 60px 15px 0;
+  margin-bottom: 60px;
+  height:100%;/*400px;*/
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+  position: fixed;
 }
 .container .text-muted {
   margin: 20px 0;
@@ -50,13 +55,27 @@ img.jugador
     padding-left:200px;
 }
 
-.pasto
+div.pasto
 {
     background-image:url("/Imagenes/pasto.png");
-    height:400px;
+   background-repeat:no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
 }
 
-formulario
+div.master
+{
+    background-image:url("/Imagenes/fondo1.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+div.formulario
 {
   border-style  : groove;
   border-radius: 10px;
@@ -67,26 +86,36 @@ formulario
 div.jugadoresContainer
 {
     height:400px;
+    background-image: url("../Imagenes/pasto.png");
 }
 
 .centroBoton
 {
-    position: absolute;
-    top:50%;
-    left:50%;
-    width:800px;
-    height:400px;
-    margin-top:-200px;
-    margin-left:-400px;
+    margin: 0 auto 0 auto;
+    width: 700px;
 }
 
-.btnInicio{
-    margin: 50px;
+.btnInicio
+{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-left: none;
+    border-right: none;
+    border-radius: 15px;
+    background-color: rgba(220,220,220,.65);
+    /*opacity: .65;*/
+    color: Green;
     width: 250px;
     height: 150px;
-    background-color:transparent;
-    font-family:Verdana;
-    font-size:x-large;
+    margin: 40px;
+    font: 20px Verdana, serif;
+    /*font-family:Verdana;
+    font-size:x-large;*/
+}
+.btnInicio:hover
+{
+    font: bold 18px Verdana, serif;
+    opacity: .8;
 }
 .logoCentro
 {

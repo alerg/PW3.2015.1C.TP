@@ -211,16 +211,18 @@ namespace TP1
         /// Create a new comentario object.
         /// </summary>
         /// <param name="idComentario">Initial value of the idComentario property.</param>
-        /// <param name="cIdUsuario">Initial value of the cIdUsuario property.</param>
         /// <param name="cFecha">Initial value of the cFecha property.</param>
         /// <param name="cDetalle">Initial value of the cDetalle property.</param>
-        public static comentario Createcomentario(global::System.Int32 idComentario, global::System.Int32 cIdUsuario, global::System.DateTime cFecha, global::System.String cDetalle)
+        /// <param name="cNombre">Initial value of the cNombre property.</param>
+        /// <param name="cEmail">Initial value of the cEmail property.</param>
+        public static comentario Createcomentario(global::System.Int32 idComentario, global::System.DateTime cFecha, global::System.String cDetalle, global::System.String cNombre, global::System.String cEmail)
         {
             comentario comentario = new comentario();
             comentario.idComentario = idComentario;
-            comentario.cIdUsuario = cIdUsuario;
             comentario.cFecha = cFecha;
             comentario.cDetalle = cDetalle;
+            comentario.cNombre = cNombre;
+            comentario.cEmail = cEmail;
             return comentario;
         }
 
@@ -254,30 +256,6 @@ namespace TP1
         private global::System.Int32 _idComentario;
         partial void OnidComentarioChanging(global::System.Int32 value);
         partial void OnidComentarioChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 cIdUsuario
-        {
-            get
-            {
-                return _cIdUsuario;
-            }
-            set
-            {
-                OncIdUsuarioChanging(value);
-                ReportPropertyChanging("cIdUsuario");
-                _cIdUsuario = StructuralObject.SetValidValue(value);
-                ReportPropertyChanged("cIdUsuario");
-                OncIdUsuarioChanged();
-            }
-        }
-        private global::System.Int32 _cIdUsuario;
-        partial void OncIdUsuarioChanging(global::System.Int32 value);
-        partial void OncIdUsuarioChanged();
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -326,6 +304,54 @@ namespace TP1
         private global::System.String _cDetalle;
         partial void OncDetalleChanging(global::System.String value);
         partial void OncDetalleChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String cNombre
+        {
+            get
+            {
+                return _cNombre;
+            }
+            set
+            {
+                OncNombreChanging(value);
+                ReportPropertyChanging("cNombre");
+                _cNombre = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("cNombre");
+                OncNombreChanged();
+            }
+        }
+        private global::System.String _cNombre;
+        partial void OncNombreChanging(global::System.String value);
+        partial void OncNombreChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String cEmail
+        {
+            get
+            {
+                return _cEmail;
+            }
+            set
+            {
+                OncEmailChanging(value);
+                ReportPropertyChanging("cEmail");
+                _cEmail = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("cEmail");
+                OncEmailChanged();
+            }
+        }
+        private global::System.String _cEmail;
+        partial void OncEmailChanging(global::System.String value);
+        partial void OncEmailChanged();
 
         #endregion
 

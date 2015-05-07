@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TP1.Equipos {
+namespace TP1.Administracion {
     
     
     public partial class Equipos {

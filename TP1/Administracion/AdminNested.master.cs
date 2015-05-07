@@ -5,9 +5,9 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace TP1.Equipos
+namespace TP1
 {
-    public partial class Equipos : System.Web.UI.Page
+    public partial class AdminNested : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
