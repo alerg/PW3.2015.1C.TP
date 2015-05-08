@@ -2,9 +2,9 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-	<form id="formContact" runat="server">
+      <form id="formContact" runat="server">
         <div class="col-lg-6 formulario">
-         <div class="form-group">
+          <div class="form-group">
             <label for="InputName">Nombre Completo</label>
             <div class="input-group">
                 <asp:TextBox ID="txtName" placeholder="Ingrese Nombre" class="form-control" runat="server"></asp:TextBox>
