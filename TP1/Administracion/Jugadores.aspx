@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row jugadoresContainer">
+    <div class="row formContainer">
         <div class="col-md-6 pasto">
             <div class="container-fluid formulario">
             <form runat="server" class="form-horizontal" action="">

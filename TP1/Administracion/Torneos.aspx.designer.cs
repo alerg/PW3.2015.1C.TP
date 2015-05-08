@@ -10,7 +10,7 @@
 namespace TP1.Administracion {
     
     
-    public partial class Equipos {
+    public partial class Torneos {
         
         /// <summary>
         /// Form1 control.
@@ -40,49 +40,22 @@ namespace TP1.Administracion {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
         
         /// <summary>
-        /// txtTorneo control.
+        /// rbActivoTrue control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTorneo;
+        protected global::System.Web.UI.WebControls.RadioButton rbActivoTrue;
         
         /// <summary>
-        /// RequiredFieldValidator5 control.
+        /// rbActivoFalse control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator5;
-        
-        /// <summary>
-        /// txtMonto control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMonto;
-        
-        /// <summary>
-        /// RequiredFieldValidator6 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator6;
-        
-        /// <summary>
-        /// RegularExpressionValidator2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator2;
+        protected global::System.Web.UI.WebControls.RadioButton rbActivoFalse;
         
         /// <summary>
         /// btnGuardar control.

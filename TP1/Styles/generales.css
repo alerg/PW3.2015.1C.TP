@@ -4,7 +4,7 @@
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
+  /*margin-bottom: 60px;*/
       /*background-image: url("../Imagenes/pasto.png");
     background-repeat:no-repeat;
     -webkit-background-size: 100%;
@@ -83,7 +83,7 @@ div.formulario
 }
 
 
-div.jugadoresContainer
+div.formContainer
 {
     height:400px;
     background-image: url("../Imagenes/pasto.png");
@@ -114,7 +114,7 @@ div.jugadoresContainer
 }
 .btnInicio:hover
 {
-    font: bold 18px Verdana, serif;
+    font: 22px Verdana, serif;
     opacity: .8;
 }
 .logoCentro

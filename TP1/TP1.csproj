@@ -54,6 +54,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Administracion\Torneos.aspx" />
     <Content Include="dist\css\bootstrap-theme.min.css" />
     <Content Include="dist\css\bootstrap.min.css" />
     <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
@@ -89,6 +90,13 @@
     </Compile>
     <Compile Include="Administracion\AdminNested.master.designer.cs">
       <DependentUpon>AdminNested.master</DependentUpon>
+    </Compile>
+    <Compile Include="Administracion\Torneos.aspx.cs">
+      <DependentUpon>Torneos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Administracion\Torneos.aspx.designer.cs">
+      <DependentUpon>Torneos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equipos\Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>

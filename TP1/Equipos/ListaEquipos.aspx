@@ -13,12 +13,12 @@
                     <h3 class="panel-title">Lista de Equipos</h3>
                 </div>
                 <div>
-                    <asp:RadioButton GroupName="TipoTorneo" AutoPostBack="true" ID="radTodos" runat="server" Text="Todos los torneos" oncheckedchanged="radTodos_CheckedChanged" />
+                    <%--<asp:RadioButton GroupName="TipoTorneo" AutoPostBack="true" ID="radTodos" runat="server" Text="Todos los torneos" oncheckedchanged="radTodos_CheckedChanged" />
                     <asp:RadioButton GroupName="TipoTorneo" AutoPostBack="true" ID="radInactivo" runat="server" Text="Torneos inactivos" oncheckedchanged="chkInactivo_CheckedChanged" />
-                    <asp:RadioButton GroupName="TipoTorneo" AutoPostBack="true" ID="radActivo" runat="server" Text="Torneos activos" oncheckedchanged="RadioButton1_CheckedChanged" />
+                    <asp:RadioButton GroupName="TipoTorneo" AutoPostBack="true" ID="radActivo" runat="server" Text="Torneos activos" oncheckedchanged="RadioButton1_CheckedChanged" />--%>
                 </div>
                 <div class="panel-body">
-                    <asp:GridView ID="gvEquipos" runat="server" AutoGenerateColumns="False" EmptyDataText="No hay datos."
+                   <%-- <asp:GridView ID="gvEquipos" runat="server" AutoGenerateColumns="False" EmptyDataText="No hay datos."
                             CssClass="table table-striped" GridLines="None" ShowHeaderWhenEmpty="True">
                             <AlternatingRowStyle />
                             <Columns>
@@ -26,7 +26,7 @@
                                 <asp:BoundField DataField="eNombre" HeaderText="Nombre" />
                                 <asp:BoundField DataField="eTorneo" HeaderText="Torneo" />
                             </Columns>
-                    </asp:GridView>
+                    </asp:GridView>--%>
                 </div>
             </div>
         </div>
