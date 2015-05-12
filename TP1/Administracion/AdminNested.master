@@ -21,7 +21,11 @@
         </div>
     </nav>
     <div class="container">
-    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-    </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
     </div>
+</asp:Content>
+<asp:Content ID="ContentFooter" ContentPlaceHolderID="ContentPlaceHolderFooter" runat="server">
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderFooterAdmin" runat="server">
+    </asp:ContentPlaceHolder>
 </asp:Content>

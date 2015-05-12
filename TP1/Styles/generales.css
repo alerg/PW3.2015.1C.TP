@@ -1,4 +1,22 @@
-﻿html {
+﻿[contendedor="inicio"]
+{
+    margin-top: 0px;
+    height:100%;/*400px;*/
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    /*position: fixed;*/
+    position: relative;
+    background-image:url("/Imagenes/fondo1.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+}
+
+
+html {
   position: relative;
   min-height: 100%;
 }
@@ -13,7 +31,7 @@ body {
     background-size: 100%;*/
 }
 .footer {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   /* Set the fixed height of the footer here */
@@ -21,40 +39,114 @@ body {
   background-color: #f5f5f5;
 }
 
+.footer > .container 
+{
+    text-align: center;
+    /*width: 600px;
+    margin: -10px auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    */
+}
 
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
 
 body > .container {
-  margin-bottom: 60px;
   height:100%;/*400px;*/
   min-height: 100%;
   width: 100%;
   min-width: 100%;
-  position: fixed;
+  /*position: fixed;*/
+  position: relative;
 }
+
+@media (min-width: 768px){
+    .col-md-4
+    {
+        width: 50%;
+        float:left !important;
+    }
+}
+
+@media (min-width: 992px){
+    .col-md-4
+    {
+        width: 33.33333333%;
+        float:left !important;
+    }
+}
+
+
 .container .text-muted {
-  margin: 20px 0;
+  margin: 12px 0;
+}
+@media (min-width: 768px){
+    .big
+    {
+        display:block;
+    }
+    .small
+    {
+        display:none;
+    }
+}
+@media (max-width: 767px){
+    .big
+    {
+        display:none;
+    }
+    .small
+    {
+        display:block;
+    }
 }
 
-.footer > .container 
+@media (min-width: 1200px){
+    .container {
+      width: 1170px;
+    }
+}
+
+@media (min-width: 992px){
+    .container {
+      width: 970px;
+    }
+}
+
+@media (min-width: 768px){
+    .container {
+      width: 750px;
+    }
+}
+
+@media (max-width: 768px){
+    .colImagen
+    {
+        display:none;
+    }
+}
+
+.jugador
 {
-    width: 600px;
-    margin: -10px auto;
-    padding-right: 15px;
-    padding-left: 15px;
+    height:400px;
 }
 
+@media (min-width: 768px){
+    .jugador
+    {
+        padding-left:50px;
+    }
+}
+@media (min-width: 992px){
+    .jugador {
+        padding-left:100px;
+    }
+}
 code {
   font-size: 80%;
 }
-img.jugador
-{
-    height:400px;
-    padding-left:200px;
-}
-
 div.pasto
 {
     background-image:url("/Imagenes/pasto.png");
@@ -65,15 +157,6 @@ div.pasto
     background-size: 100%;
 }
 
-div.master
-{
-    background-image:url("/Imagenes/fondo1.jpg");
-    background-repeat:no-repeat;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-}
 
 div.formulario
 {
@@ -85,10 +168,27 @@ div.formulario
 
 div.formContainer
 {
-    height:400px;
+    margin-top: 60px;
+    /*height:400px;*/
     background-image: url("../Imagenes/pasto.png");
 }
 
+.formContainerJugadores
+{
+    height:400px;
+}
+
+/*TORNEOS*/
+.formContainerTorneos
+{
+    height:400px;
+}
+.checkActive
+{
+    display:none
+}
+
+/*FIN TORNEOS*/
 .centroBoton
 {
     margin: 0 auto 0 auto;

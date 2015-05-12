@@ -6,14 +6,9 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  margin-bottom: 60px;
-      background-image: url("../Imagenes/pasto.png");
-    background-repeat:no-repeat;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
+   margin-bottom : 60px;
 }
+
 .footer {
   position: absolute;
   bottom: 0;

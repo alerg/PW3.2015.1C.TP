@@ -2,14 +2,14 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container master ">
+    <div contendedor="inicio" class="container inicio">
         <form id="form1" runat="server">
             <%--<div class="logoCentro"><img alt="Por siempre futbol" src="Imagenes/logo.png" /></div>--%>
             <div class="centroBoton">
                 <img alt="Por siempre futbol" src="Imagenes/logo.png" />
                 <asp:Button ID="btnListados" runat="server" Text="Equipos" CssClass="btnInicio" 
                     onclick="btnListados_Click" />
-                <asp:Button ID="btnAdmin" runat="server" Text="Administración" CssClass="btnInicio" />
+                <asp:Button ID="btnAdmin" runat="server" Text="Administración" CssClass="btnInicio" onclick="btnAdmin_Click"/>
             </div>
         </form>
     </div>

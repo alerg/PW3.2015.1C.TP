@@ -6,7 +6,6 @@
 <head runat="server">
     <title>Siempre Fútbol</title>
     <link href="/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="/Styles/sticky-footer-navbar.css" rel="stylesheet" type="text/css" />
     <link href="/Styles/generales.css" rel="stylesheet" type="text/css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -18,5 +17,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
+    </asp:ContentPlaceHolder>
 </body>
 </html>

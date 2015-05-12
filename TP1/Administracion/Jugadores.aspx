@@ -2,8 +2,10 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row formContainer">
-        <div class="col-md-6 pasto">
+    <div class="row formContainer formContainerJugadores">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-4">
             <div class="container-fluid formulario">
             <form runat="server" class="form-horizontal" action="">
               <div class="form-group">
@@ -39,8 +41,10 @@
             </form>
             </div>
         </div>
-        <div class="col-md-6 pasto">
+        <div class="colImagen col-md-4">
             <img  src="/Imagenes/messi.png" class="jugador"/>
+        </div>
+        <div class="col-md-2">
         </div>
     </div>
 </asp:Content>

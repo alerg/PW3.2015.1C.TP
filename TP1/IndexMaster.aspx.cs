@@ -18,5 +18,10 @@ namespace TP1
         {
             Response.Redirect("Equipos/ListaEquipos.aspx");
         }
+
+        protected void btnAdmin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Administracion/Equipos.aspx");
+        }
     }
 }
