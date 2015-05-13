@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="container master ">
+    <div class="container master">
         <form id="form1" runat="server">
             <%--<div class="logoCentro"><img alt="Por siempre futbol" src="Imagenes/logo.png" /></div>--%>
             <div class="centroBoton">

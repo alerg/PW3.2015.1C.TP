@@ -17,7 +17,14 @@ using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
 [assembly: EdmSchemaAttribute()]
-namespace TP1
+#region EDM Relationship Metadata
+
+[assembly: EdmRelationshipAttribute("TP1_PW3Model", "FK_equipo_torneo", "torneo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Entidades.torneo), "equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entidades.equipo), true)]
+[assembly: EdmRelationshipAttribute("TP1_PW3Model", "FK_jugador_equipo", "equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Entidades.equipo), "jugador", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entidades.jugador), true)]
+
+#endregion
+
+namespace Entidades
 {
     #region Contexts
     
@@ -68,125 +75,149 @@ namespace TP1
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<comentario> comentario
+        public ObjectSet<comentario> comentarios
         {
             get
             {
-                if ((_comentario == null))
+                if ((_comentarios == null))
                 {
-                    _comentario = base.CreateObjectSet<comentario>("comentario");
+                    _comentarios = base.CreateObjectSet<comentario>("comentarios");
                 }
-                return _comentario;
+                return _comentarios;
             }
         }
-        private ObjectSet<comentario> _comentario;
+        private ObjectSet<comentario> _comentarios;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<equipo> equipo
+        public ObjectSet<equipo> equipoes
         {
             get
             {
-                if ((_equipo == null))
+                if ((_equipoes == null))
                 {
-                    _equipo = base.CreateObjectSet<equipo>("equipo");
+                    _equipoes = base.CreateObjectSet<equipo>("equipoes");
                 }
-                return _equipo;
+                return _equipoes;
             }
         }
-        private ObjectSet<equipo> _equipo;
+        private ObjectSet<equipo> _equipoes;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<jugador> jugador
+        public ObjectSet<jugador> jugadors
         {
             get
             {
-                if ((_jugador == null))
+                if ((_jugadors == null))
                 {
-                    _jugador = base.CreateObjectSet<jugador>("jugador");
+                    _jugadors = base.CreateObjectSet<jugador>("jugadors");
                 }
-                return _jugador;
+                return _jugadors;
             }
         }
-        private ObjectSet<jugador> _jugador;
+        private ObjectSet<jugador> _jugadors;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<torneo> torneo
+        public ObjectSet<sysdiagram> sysdiagrams
         {
             get
             {
-                if ((_torneo == null))
+                if ((_sysdiagrams == null))
                 {
-                    _torneo = base.CreateObjectSet<torneo>("torneo");
+                    _sysdiagrams = base.CreateObjectSet<sysdiagram>("sysdiagrams");
                 }
-                return _torneo;
+                return _sysdiagrams;
             }
         }
-        private ObjectSet<torneo> _torneo;
+        private ObjectSet<sysdiagram> _sysdiagrams;
     
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<usuario> usuario
+        public ObjectSet<torneo> torneos
         {
             get
             {
-                if ((_usuario == null))
+                if ((_torneos == null))
                 {
-                    _usuario = base.CreateObjectSet<usuario>("usuario");
+                    _torneos = base.CreateObjectSet<torneo>("torneos");
                 }
-                return _usuario;
+                return _torneos;
             }
         }
-        private ObjectSet<usuario> _usuario;
+        private ObjectSet<torneo> _torneos;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<usuario> usuarios
+        {
+            get
+            {
+                if ((_usuarios == null))
+                {
+                    _usuarios = base.CreateObjectSet<usuario>("usuarios");
+                }
+                return _usuarios;
+            }
+        }
+        private ObjectSet<usuario> _usuarios;
 
         #endregion
 
         #region AddTo Methods
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the comentario EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the comentarios EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTocomentario(comentario comentario)
+        public void AddTocomentarios(comentario comentario)
         {
-            base.AddObject("comentario", comentario);
+            base.AddObject("comentarios", comentario);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the equipo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the equipoes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddToequipo(equipo equipo)
+        public void AddToequipoes(equipo equipo)
         {
-            base.AddObject("equipo", equipo);
+            base.AddObject("equipoes", equipo);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the jugador EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the jugadors EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTojugador(jugador jugador)
+        public void AddTojugadors(jugador jugador)
         {
-            base.AddObject("jugador", jugador);
+            base.AddObject("jugadors", jugador);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the torneo EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the sysdiagrams EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTotorneo(torneo torneo)
+        public void AddTosysdiagrams(sysdiagram sysdiagram)
         {
-            base.AddObject("torneo", torneo);
+            base.AddObject("sysdiagrams", sysdiagram);
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the usuario EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// Deprecated Method for adding a new object to the torneos EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
-        public void AddTousuario(usuario usuario)
+        public void AddTotorneos(torneo torneo)
         {
-            base.AddObject("usuario", usuario);
+            base.AddObject("torneos", torneo);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the usuarios EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddTousuarios(usuario usuario)
+        {
+            base.AddObject("usuarios", usuario);
         }
 
         #endregion
@@ -463,6 +494,70 @@ namespace TP1
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TP1_PW3Model", "FK_equipo_torneo", "torneo")]
+        public torneo torneo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<torneo>("TP1_PW3Model.FK_equipo_torneo", "torneo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<torneo>("TP1_PW3Model.FK_equipo_torneo", "torneo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<torneo> torneoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<torneo>("TP1_PW3Model.FK_equipo_torneo", "torneo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<torneo>("TP1_PW3Model.FK_equipo_torneo", "torneo", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TP1_PW3Model", "FK_jugador_equipo", "jugador")]
+        public EntityCollection<jugador> jugadors
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<jugador>("TP1_PW3Model.FK_jugador_equipo", "jugador");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<jugador>("TP1_PW3Model.FK_jugador_equipo", "jugador", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
@@ -622,6 +717,205 @@ namespace TP1
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TP1_PW3Model", "FK_jugador_equipo", "equipo")]
+        public equipo equipo
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<equipo>("TP1_PW3Model.FK_jugador_equipo", "equipo").Value;
+            }
+            set
+            {
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<equipo>("TP1_PW3Model.FK_jugador_equipo", "equipo").Value = value;
+            }
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [BrowsableAttribute(false)]
+        [DataMemberAttribute()]
+        public EntityReference<equipo> equipoReference
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<equipo>("TP1_PW3Model.FK_jugador_equipo", "equipo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<equipo>("TP1_PW3Model.FK_jugador_equipo", "equipo", value);
+                }
+            }
+        }
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="TP1_PW3Model", Name="sysdiagram")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class sysdiagram : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new sysdiagram object.
+        /// </summary>
+        /// <param name="name">Initial value of the name property.</param>
+        /// <param name="principal_id">Initial value of the principal_id property.</param>
+        /// <param name="diagram_id">Initial value of the diagram_id property.</param>
+        public static sysdiagram Createsysdiagram(global::System.String name, global::System.Int32 principal_id, global::System.Int32 diagram_id)
+        {
+            sysdiagram sysdiagram = new sysdiagram();
+            sysdiagram.name = name;
+            sysdiagram.principal_id = principal_id;
+            sysdiagram.diagram_id = diagram_id;
+            return sysdiagram;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                OnnameChanging(value);
+                ReportPropertyChanging("name");
+                _name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("name");
+                OnnameChanged();
+            }
+        }
+        private global::System.String _name;
+        partial void OnnameChanging(global::System.String value);
+        partial void OnnameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 principal_id
+        {
+            get
+            {
+                return _principal_id;
+            }
+            set
+            {
+                Onprincipal_idChanging(value);
+                ReportPropertyChanging("principal_id");
+                _principal_id = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("principal_id");
+                Onprincipal_idChanged();
+            }
+        }
+        private global::System.Int32 _principal_id;
+        partial void Onprincipal_idChanging(global::System.Int32 value);
+        partial void Onprincipal_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 diagram_id
+        {
+            get
+            {
+                return _diagram_id;
+            }
+            set
+            {
+                if (_diagram_id != value)
+                {
+                    Ondiagram_idChanging(value);
+                    ReportPropertyChanging("diagram_id");
+                    _diagram_id = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("diagram_id");
+                    Ondiagram_idChanged();
+                }
+            }
+        }
+        private global::System.Int32 _diagram_id;
+        partial void Ondiagram_idChanging(global::System.Int32 value);
+        partial void Ondiagram_idChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int32> version
+        {
+            get
+            {
+                return _version;
+            }
+            set
+            {
+                OnversionChanging(value);
+                ReportPropertyChanging("version");
+                _version = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("version");
+                OnversionChanged();
+            }
+        }
+        private Nullable<global::System.Int32> _version;
+        partial void OnversionChanging(Nullable<global::System.Int32> value);
+        partial void OnversionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] definition
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_definition);
+            }
+            set
+            {
+                OndefinitionChanging(value);
+                ReportPropertyChanging("definition");
+                _definition = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("definition");
+                OndefinitionChanged();
+            }
+        }
+        private global::System.Byte[] _definition;
+        partial void OndefinitionChanging(global::System.Byte[] value);
+        partial void OndefinitionChanged();
+
+        #endregion
+
+    
     }
     
     /// <summary>
@@ -757,6 +1051,32 @@ namespace TP1
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("TP1_PW3Model", "FK_equipo_torneo", "equipo")]
+        public EntityCollection<equipo> equipoes
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<equipo>("TP1_PW3Model.FK_equipo_torneo", "equipo");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<equipo>("TP1_PW3Model.FK_equipo_torneo", "equipo", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>
