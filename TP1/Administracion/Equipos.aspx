@@ -4,7 +4,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row formContainer">
         <div class="hidden-xs col-sm-2 col-md-2"></div>
-        <div class="col-xs-12 col-sm-5 col-md-4">
+        <div class="col-xs-12 col-sm-5 col-md-5">
             <div class="container-fluid formulario">
             <form id="formEquipos" runat="server" class="form-horizontal" action="">
               <div class="form-group">
@@ -31,7 +31,7 @@
             </form>
             </div>
         </div>
-        <div class="hidden-xs col-sm-3 col-md-4">
+        <div class="hidden-xs col-sm-3 col-md-3">
             <img  src="/Imagenes/messi.png" class="jugador"/>
         </div>
         <div class="hidden-xs col-sm-2 col-md-2"></div>
