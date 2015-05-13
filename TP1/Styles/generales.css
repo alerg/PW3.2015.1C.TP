@@ -62,6 +62,11 @@ body > .container {
   position: relative;
 }
 
+
+.container .text-muted {
+  margin: 12px 0;
+}
+/*
 @media (min-width: 768px){
     .col-md-4
     {
@@ -77,11 +82,8 @@ body > .container {
         float:left !important;
     }
 }
+*/
 
-
-.container .text-muted {
-  margin: 12px 0;
-}
 @media (min-width: 768px){
     .big
     {
@@ -102,7 +104,7 @@ body > .container {
         display:block;
     }
 }
-
+/*
 @media (min-width: 1200px){
     .container {
       width: 1170px;
@@ -127,7 +129,7 @@ body > .container {
         display:none;
     }
 }
-
+*/
 .jugador
 {
     height:400px;

@@ -64,7 +64,6 @@
     <Content Include="Administracion\Jugadores.aspx" />
     <Content Include="Imagenes\fondo.jpg" />
     <Content Include="Imagenes\logo.jpg" />
-    <Content Include="Index.aspx" />
     <Content Include="Equipos\ListaEquipos.aspx" />
     <Content Include="IndexMaster.aspx" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
@@ -126,13 +125,6 @@
     </Compile>
     <Compile Include="Administracion\Jugadores.aspx.designer.cs">
       <DependentUpon>Jugadores.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Index.aspx.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Index.aspx.designer.cs">
-      <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equipos\ListaEquipos.aspx.cs">
       <DependentUpon>ListaEquipos.aspx</DependentUpon>
