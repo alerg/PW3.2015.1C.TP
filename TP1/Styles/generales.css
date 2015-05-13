@@ -22,7 +22,7 @@ html {
 }
 body {
   /* Margin bottom by footer height */
-  /*margin-bottom: 60px;*/
+  margin-bottom: 60px;
       /*background-image: url("../Imagenes/pasto.png");
     background-repeat:no-repeat;
     -webkit-background-size: 100%;
@@ -152,11 +152,11 @@ code {
 div.pasto
 {
     background-image:url("/Imagenes/pasto.png");
-   background-repeat:no-repeat;
-    -webkit-background-size: 100%;
+    background-repeat:no-repeat;
+    /*-webkit-background-size: 100%;
     -moz-background-size: 100%;
     -o-background-size: 100%;
-    background-size: 100%;
+    background-size: 100%;*/
 }
 
 
@@ -165,15 +165,17 @@ div.formulario
   border-style  : groove;
   border-radius: 10px;
   padding-top: 40px;
+  margin-top: 100px;
+  margin-left: 100px;
 }
 
 
-div.formContainer
+/*div.formContainer
 {
     margin-top: 60px;
     /*height:400px;*/
     background-image: url("../Imagenes/pasto.png");
-}
+}*/
 
 .formContainerJugadores
 {

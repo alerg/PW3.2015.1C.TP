@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Entidades;
 
 namespace TP1
 {
@@ -11,7 +12,8 @@ namespace TP1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            gdvEquipos.DataSource = Datos.CargarEquipos();
+            gdvEquipos.DataBind();
         }
     }
 }
