@@ -4,7 +4,6 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container theme-showcase" >
         <div class="container">
-        <br />
             <div class="page-header">
                 <h2>Equipos</h2>
             </div>
