@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div class="row formContainer">
+    <div class="row containerWithHeader backgroundPasto">
         <div class="hidden-xs col-sm-2 col-md-2"></div>
         <div class="col-xs-12 col-sm-5 col-md-5">
             <div class="container-fluid formulario">

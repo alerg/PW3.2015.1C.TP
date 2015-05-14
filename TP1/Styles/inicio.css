@@ -25,6 +25,12 @@
 {
     background-color: rgba(220,220,220,.65);
 }
+
+.titleImage
+{
+    display:inline;
+}
+
 .centrar
 {
     text-align:center;

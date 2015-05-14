@@ -4,12 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="container-fluid inicio">
+                <div class="titleIndex centrar">
+                    <img class="img-responsive titleImage" alt="Por siempre futbol" src="Imagenes/logo.png" />
+                </div>
         <div class="row">
             <div class="col-xs-1 col-sm-2 col-md-2"></div>
             <div class="col-xs-10 col-sm-8 col-md-8">
-                <div class="titleIndex centrar">
-                    <img alt="Por siempre futbol" src="Imagenes/logo.png" />
-                </div>
                 <div class="">
                     <form id="form1" runat="server">
                         <%--<div class="logoCentro"><img alt="Por siempre futbol" src="Imagenes/logo.png" /></div>--%>

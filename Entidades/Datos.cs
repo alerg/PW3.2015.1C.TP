@@ -11,9 +11,10 @@ namespace Entidades
         {
             using (TP1_PW3Entities bd = new TP1_PW3Entities())
             {
-                var datos = (from e in bd.equipoes
+                /*var datos = (from e in bd.equipoes
                              select e).ToList();
-                return datos;
+                return datos;*/
+                return null;
             }
         }
     }
