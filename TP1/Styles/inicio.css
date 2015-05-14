@@ -1,12 +1,10 @@
-﻿/*INICIO*/
-.inicio
+﻿.inicio
 {
     margin-top: 0px;
-    height:100%;/*400px;*/
+    height:100%;
     min-height: 100%;
     width: 100%;
     min-width: 100%;
-    /*position: fixed;*/
     position: relative;
     background-image:url("/Imagenes/fondo1.jpg");
     background-repeat:no-repeat;
@@ -44,14 +42,11 @@
     border-right: none;
     border-radius: 15px;
     background-color: rgba(220,220,220,.65);
-    /*opacity: .65;*/
     color: Green;
     width: 250px;
     height: 150px;
     margin: 40px 0 40px 0;
     font: 20px Verdana, serif;
-    /*font-family:Verdana;
-    font-size:x-large;*/
 }
 .btnInicio:hover
 {
@@ -66,4 +61,3 @@
     margin-left: -390px;
     
 }
-/*FIN INICIO*/

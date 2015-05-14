@@ -64,20 +64,11 @@ div.formulario
     background-image: url("../Imagenes/pasto.png");
 }
 
-.formContainerJugadores
-{
-    height:400px;
-}
 /*FIN FORMULARIO*/
 
 .jugador
 {
     height: 400px;
-}
-
-.formContainerContacto
-{
-    height:400px;
 }
 
 .containerWithHeader
