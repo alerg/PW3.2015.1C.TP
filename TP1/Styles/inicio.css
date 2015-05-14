@@ -1,0 +1,63 @@
+﻿/*INICIO*/
+.inicio
+{
+    margin-top: 0px;
+    height:100%;/*400px;*/
+    min-height: 100%;
+    width: 100%;
+    min-width: 100%;
+    /*position: fixed;*/
+    position: relative;
+    background-image:url("/Imagenes/fondo1.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: cover;
+}
+
+.containerBotones
+{
+    width: 100%;
+    margin: 0 auto;
+}
+.titleIndex 
+{
+    background-color: rgba(220,220,220,.65);
+}
+.centrar
+{
+    text-align:center;
+}
+
+.btnInicio
+{
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
+    border-left: none;
+    border-right: none;
+    border-radius: 15px;
+    background-color: rgba(220,220,220,.65);
+    /*opacity: .65;*/
+    color: Green;
+    width: 250px;
+    height: 150px;
+    margin: 40px 0 40px 0;
+    font: 20px Verdana, serif;
+    /*font-family:Verdana;
+    font-size:x-large;*/
+}
+.btnInicio:hover
+{
+    font: 22px Verdana, serif;
+    opacity: .8;
+}
+.logoCentro
+{
+    width: 580px;
+    position: absolute;
+    left: 50%;
+    margin-left: -390px;
+    
+}
+/*FIN INICIO*/

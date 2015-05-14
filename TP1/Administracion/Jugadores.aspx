@@ -8,26 +8,26 @@
             <div class="container-fluid formulario">
             <form runat="server" class="form-horizontal" action="">
               <div class="form-group">
-                <label for="txtNombre" class="col-sm-2 control-label">Nombre</label>
-                <div class="col-sm-10">
+                <label for="txtNombre" class="col-sm-3 control-label">Nombre</label>
+                <div class="col-sm-9">
                     <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
                   </div>
               </div>
               <div class="form-group">
-                <label for="txtApellido" class="col-sm-2 control-label">Apellido</label>
-                <div class="col-sm-10">
+                <label for="txtApellido" class="col-sm-3 control-label">Apellido</label>
+                <div class="col-sm-9">
                   <asp:TextBox ID="txtApellido" class="form-control" placeholder="Apellido" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="form-group">
-                <label for="txtEdad" class="col-sm-2 control-label">Edad</label>
-                <div class="col-sm-10">
+                <label for="txtEdad" class="col-sm-3 control-label">Edad</label>
+                <div class="col-sm-9">
                   <asp:TextBox ID="txtEdad" class="form-control" placeholder="Edad" runat="server"></asp:TextBox>
                 </div>
               </div>
               <div class="form-group">
-                <label for="txtEquipo" class="col-sm-2 control-label">Equipo</label>
-                <div class="col-sm-10">
+                <label for="txtEquipo" class="col-sm-3 control-label">Equipo</label>
+                <div class="col-sm-9">
                     <asp:DropDownList ID="DropDownList1" class="form-control" placeholder="Equipo" runat="server">
                     </asp:DropDownList>
                 </div>

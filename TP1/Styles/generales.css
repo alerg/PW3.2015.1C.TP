@@ -1,36 +1,11 @@
-﻿[contendedor="inicio"]
-{
-    margin-top: 0px;
-    height:100%;/*400px;*/
-    min-height: 100%;
-    width: 100%;
-    min-width: 100%;
-    /*position: fixed;*/
-    position: relative;
-    background-image:url("/Imagenes/fondo1.jpg");
-    background-repeat:no-repeat;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-}
-
-
-html {
+﻿html {
   position: relative;
   min-height: 100%;
 }
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-  margin-top: 60px;
-      /*background-image: url("../Imagenes/pasto.png");
-    background-repeat:no-repeat;
-    -webkit-background-size: 100%;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;*/
+  min-height: 100%;
 }
+/*INICIO FOOTER*/
 .footer {
   position: relative;
   bottom: 0;
@@ -50,106 +25,33 @@ body {
     */
 }
 
-/* Custom page CSS
--------------------------------------------------- */
-/* Not required for template or sticky footer method. */
-
-body > .container {
-  height:100%;/*400px;*/
-  min-height: 100%;
-  width: 100%;
-  min-width: 100%;
-  /*position: fixed;*/
-  position: relative;
-}
-
-
-.container .text-muted {
+.footer > .container .text-muted {
   margin: 12px 0;
 }
-/*
-@media (min-width: 768px){
-    .col-md-4
-    {
-        width: 50%;
-        float:left !important;
-    }
-}
-
-@media (min-width: 992px){
-    .col-md-4
-    {
-        width: 33.33333333%;
-        float:left !important;
-    }
-}
-*/
 
 @media (min-width: 768px){
-    .big
+    .footer > .container .big
     {
         display:block;
     }
-    .small
+    .footer > .container .small
     {
         display:none;
     }
 }
 @media (max-width: 767px){
-    .big
+    .footer > .container .big
     {
         display:none;
     }
-    .small
+    .footer > .container .small
     {
         display:block;
     }
 }
-/*
-@media (min-width: 1200px){
-    .container {
-      width: 1170px;
-    }
-}
 
-@media (min-width: 992px){
-    .container {
-      width: 970px;
-    }
-}
-
-@media (min-width: 768px){
-    .container {
-      width: 750px;
-    }
-}
-
-@media (max-width: 768px){
-    .colImagen
-    {
-        display:none;
-    }
-}
-*/
-.jugador
-{
-    height:400px;
-}
-
-@media (min-width: 768px){
-    .jugador
-    {
-        padding-left:50px;
-    }
-}
-@media (min-width: 992px){
-    .jugador {
-        padding-left:100px;
-    }
-}
-code {
-  font-size: 80%;
-}
+/*FIN FOOTER*/
+/*INICIO FORMULARIO*/
 div.pasto
 {
     background-image:url("/Imagenes/pasto.png");
@@ -160,19 +62,16 @@ div.pasto
     background-size: 100%;*/
 }
 
-
 div.formulario
 {
   border-style  : groove;
   border-radius: 10px;
   padding-top: 40px;
-  margin-left: 100px;
+  /*margin-left: 100px;*/
 }
-
-
 div.formContainer
 {
-    /*margin-top: 60px;*/
+    margin-top: 60px;
     /*height:400px;*/
     background-image: url("../Imagenes/pasto.png");
 }
@@ -181,51 +80,9 @@ div.formContainer
 {
     height:400px;
 }
+/*FIN FORMULARIO*/
 
-/*TORNEOS*/
-.formContainerTorneos
+.jugador
 {
     height:400px;
-}
-.checkActive
-{
-    display:none
-}
-
-/*FIN TORNEOS*/
-.centroBoton
-{
-    margin: 0 auto 0 auto;
-    width: 700px;
-}
-
-.btnInicio
-{
-    border-top: 3px solid white;
-    border-bottom: 3px solid white;
-    border-left: none;
-    border-right: none;
-    border-radius: 15px;
-    background-color: rgba(220,220,220,.65);
-    /*opacity: .65;*/
-    color: Green;
-    width: 250px;
-    height: 150px;
-    margin: 40px;
-    font: 20px Verdana, serif;
-    /*font-family:Verdana;
-    font-size:x-large;*/
-}
-.btnInicio:hover
-{
-    font: 22px Verdana, serif;
-    opacity: .8;
-}
-.logoCentro
-{
-    width: 580px;
-    position: absolute;
-    left: 50%;
-    margin-left: -390px;
-    
 }

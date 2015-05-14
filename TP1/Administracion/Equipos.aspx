@@ -8,15 +8,15 @@
             <div class="container-fluid formulario">
             <form id="formEquipos" runat="server" class="form-horizontal" action="">
               <div class="form-group">
-                <label for="InputName" class="col-sm-2 control-label">Nombre de Equipo</label>
-                <div class="col-sm-10">
+                <label for="InputName" class="col-sm-3 control-label">Nombre de Equipo</label>
+                <div class="col-sm-9">
                     <asp:TextBox ID="txtNombre" placeholder="Nombre" class="form-control" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator4" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Equipo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="form-group">
-                <label for="ddlTorneo" class="col-sm-2 control-label">Torneo</label>
-                <div class="col-sm-10">
+                <label for="ddlTorneo" class="col-sm-3 control-label">Torneo</label>
+                <div class="col-sm-9">
                     <asp:DropDownList ID="ddlTorneo" class="form-control" placeholder="Elija toneo" runat="server">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator6" EnableClientScript="true" runat="server" ErrorMessage="El torneo es obligatorio" ControlToValidate="ddlTorneo" >
