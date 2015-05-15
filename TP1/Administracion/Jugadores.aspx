@@ -41,7 +41,7 @@
             </div>
         </div>
         <div class="hidden-xs col-sm-3 col-md-3">
-            <img  src="/Imagenes/messi.png" class="jugador"/>
+            <img class="img-responsive" alt="Messi" src="/Imagenes/messi.png"/>
         </div>
         <div class="hidden-xs col-sm-2 col-md-2"></div>
     </div>

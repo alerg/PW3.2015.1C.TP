@@ -53,6 +53,11 @@ div.pasto
     background-repeat:no-repeat;
 }
 
+.centrar
+{
+    text-align:center;
+}
+
 div.formulario
 {
   border-style  : groove;
@@ -62,6 +67,7 @@ div.formulario
 .backgroundPasto
 {
     background-image: url("../Imagenes/pasto.png");
+    background-repeat: round;
 }
 
 /*FIN FORMULARIO*/
