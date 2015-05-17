@@ -31,13 +31,13 @@ namespace TP1.Administracion {
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
         
         /// <summary>
-        /// RequiredFieldValidator4 control.
+        /// ValidadorToneoObligatorio control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorToneoObligatorio;
         
         /// <summary>
         /// btnGuardar control.

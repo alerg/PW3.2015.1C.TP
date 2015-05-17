@@ -18,9 +18,9 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="dropdown"><a href="Jugadores.aspx">Jugadores</a></li>
-                <li class="dropdown"><a href="Equipos.aspx">Equipos</a></li>
-                <li class="dropdown"><a href="Torneos.aspx">Torneos</a></li>
+                <li class="dropdown" id="jugadores"><a href="Jugadores.aspx">Jugadores</a></li>
+                <li class="dropdown" id="equipos"><a href="Equipos.aspx">Equipos</a></li>
+                <li class="dropdown" id="torneos"><a href="Torneos.aspx">Torneos</a></li>
                 <li class="dropdown"><a href="../IndexMaster.aspx">Inicio</a></li>
             </ul>
         </div><!--/.nav-collapse -->

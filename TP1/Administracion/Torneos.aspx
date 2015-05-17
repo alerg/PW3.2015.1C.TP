@@ -1,6 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="AdminNested.Master" AutoEventWireup="true" CodeBehind="Torneos.aspx.cs" Inherits="TP1.Administracion.Torneos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/Styles/torneos.css" rel="stylesheet" type="text/css" />
     <link href="/dist/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -9,11 +8,12 @@
         <div class="col-xs-12 col-sm-5 col-md-5">
             <div class="container-fluid formulario">
             <form id="Form1" runat="server" class="form-horizontal" action="">
+              <input type="hidden" id="currentPage" value="torneos"/>
               <div class="form-group">
                 <label for="txtNombre" class="col-sm-3 control-label">Torneo</label>
                 <div class="col-sm-9">
                     <asp:TextBox ID="txtNombre" placeholder="Ingrese Nombre del Torneo" class="form-control" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator4" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Equipo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="ValidadorToneoObligatorio" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Torneo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="form-group">
@@ -24,14 +24,14 @@
               </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <asp:Button ID="btnGuardar" class="btn btn-default" runat="server" Text="Guardar" />
+                        <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" />
                     </div>
                 </div>
             </form>
             </div>
         </div>
         <div class="hidden-xs col-sm-3 col-md-3">
-            <img  src="/Imagenes/messi.png" class="jugador"/>
+            <img alt="messi" src="/Imagenes/messi.png" class="jugador"/>
         </div>
         <div class="col-md-2"></div>
         <div class="hidden-xs col-sm-2 col-md-2"></div>

@@ -22,6 +22,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script type="text/javascript" src="/Scripts/jquery.min.js"></script>
     <script type="text/javascript" src="/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/Scripts/header.js"></script>
     <asp:ContentPlaceHolder ID="ContentPlaceHolderFooter" runat="server">
     </asp:ContentPlaceHolder>
 </body>

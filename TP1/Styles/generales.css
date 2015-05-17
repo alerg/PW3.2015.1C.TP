@@ -81,3 +81,9 @@ div.formulario
 {
     margin-top: 60px;
 }
+
+.alert
+{
+    color: Red;
+    font-weight: bold;
+}

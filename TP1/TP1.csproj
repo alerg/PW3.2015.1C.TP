@@ -67,7 +67,6 @@
     <Content Include="Equipos\ListaEquipos.aspx" />
     <Content Include="IndexMaster.aspx" />
     <Content Include="Styles\torneos.css" />
-    <Content Include="Styles\otros.css" />
     <Content Include="Styles\inicio.css" />
     <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
     <Content Include="Scripts\jquery-1.4.1.js" />
