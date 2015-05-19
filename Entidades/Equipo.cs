@@ -5,10 +5,20 @@ using System.Text;
 
 namespace Entidades
 {
-    class Equipo
+    public class Equipo
     {
         public int idEquipo { get; set; }
         public String eNombre { get; set; }
         public int eIdTorneo { get; set; }
+
+        public List<Equipo> CargaEquipos()
+        {
+            using (TP1_PW3Entities bd = new TP1_PW3Entities())
+            {
+                var datos = (from e in bd.equipoes
+                             select e).ToList();
+                return datos;
+            }
+        }
     }
 }
