@@ -11,6 +11,13 @@
                 case 'equipos':
                     $('.dropdown#equipos').addClass('active');
                     break;
+                case 'lista':
+                    $('.dropdown#lista').addClass('active');
+                    break;
+                case 'contacto':
+                    $('.dropdown#contacto').addClass('active');
+                    break;
+
             }
         }
     }

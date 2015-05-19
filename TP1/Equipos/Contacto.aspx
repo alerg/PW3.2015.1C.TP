@@ -7,6 +7,7 @@
         <div class="col-xs-12 col-sm-5 col-md-6">
             <div class="container-fluid formulario">
             <form id="formContact" runat="server" class="form-horizontal" action="">
+                <input type="hidden" id="currentPage" value="contacto"/>
                 <div class="form-group">
                     <label for="InputName" class="col-sm-2 control-label">Nombre</label>
                     <div class="col-sm-10">
@@ -20,7 +21,7 @@
                         <asp:TextBox ID="txtEmail" placeholder="Ingrese Email" class="form-control" runat="server"></asp:TextBox>
                         <asp:RegularExpressionValidator CssClass="alert" Display="Dynamic" ID="RegularExpressionValidator1" EnableClientScript="true" 
                             runat="server" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"
-                            ErrorMessage="Email incorrecto" Display="Dynamic"></asp:RegularExpressionValidator>
+                            ErrorMessage="Email incorrecto"></asp:RegularExpressionValidator>
                         <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator2" EnableClientScript="true" 
                             runat="server" ErrorMessage="Campo Email obligatorio" ControlToValidate="txtEmail" Display="Dynamic"></asp:RequiredFieldValidator>
                     </div>
@@ -43,7 +44,7 @@
             </div>
         </div>
         <div class="hidden-xs col-sm-3 col-md-3">
-            <img alt="messi" class="img-responsive" src="/Imagenes/messi.png" class="jugador"/>
+            <img alt="messi" src="/Imagenes/messi.png" class="img-responsive"/>
         </div>
         <div class="hidden-xs col-sm-2 col-md-2"></div>
     </div>

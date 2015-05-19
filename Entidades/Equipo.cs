@@ -11,7 +11,7 @@ namespace Entidades
         public String eNombre { get; set; }
         public int eIdTorneo { get; set; }
 
-        public List<Equipo> CargaEquipos()
+        public List<equipo> CargaEquipos()
         {
             using (TP1_PW3Entities bd = new TP1_PW3Entities())
             {

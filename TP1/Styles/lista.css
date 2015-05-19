@@ -4,9 +4,10 @@
 }
 .checkActive
 {
-    margin-left:2%;
+    margin-left:10%;
 }
 .checkActive label
 {
-    margin-left:1%;
+    margin-left:5%;
+    margin-bottom: 0px;
 }
