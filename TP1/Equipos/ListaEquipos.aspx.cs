@@ -15,5 +15,11 @@ namespace TP1
             gdvEquipos.DataSource = Datos.CargarEquipos();
             gdvEquipos.DataBind();
         }
+
+        protected void OnCheckedState(object sender, EventArgs e)
+        {
+            Console.Write(e);
+            Console.Write(sender);
+        }
     }
 }

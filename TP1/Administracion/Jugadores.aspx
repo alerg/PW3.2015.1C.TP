@@ -12,7 +12,7 @@
                 <label for="txtNombre" class="col-sm-3 control-label">Nombre</label>
                 <div class="col-sm-9">
                     <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator  Display="Dynamic" CssClass="alert" ID="ValidadorNombreObligatoria" EnableClientScript="true" runat="server" ErrorMessage="El Nombre es obligatorio" ControlToValidate="txtNombre" >
+                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="ValidadorNombreObligatoria" EnableClientScript="true" runat="server" ErrorMessage="El Nombre es obligatorio" ControlToValidate="txtNombre" >
                     </asp:RequiredFieldValidator>
                 </div>
               </div>
@@ -28,7 +28,7 @@
                 <label for="txtEdad" class="col-sm-3 control-label">Edad</label>
                 <div class="col-sm-9">
                   <asp:TextBox ID="txtEdad" class="form-control" placeholder="Edad" runat="server"></asp:TextBox>
-                  <asp:RequiredFieldValidator ID="ValidadorEdadObligatoria" CssClass="alert" EnableClientScript="true" ControlToValidate="txtEdad" runat="server" ErrorMessage="La Edad es obligatoria"></asp:RequiredFieldValidator>
+                  <asp:RequiredFieldValidator ID="ValidadorEdadObligatoria" Display="Dynamic" CssClass="alert" EnableClientScript="true" ControlToValidate="txtEdad" runat="server" ErrorMessage="La Edad es obligatoria"></asp:RequiredFieldValidator>
                   <asp:RangeValidator ControlToValidate="txtEdad"  Display="Dynamic" CssClass="alert" MinimumValue="0" MaximumValue="75" ID="ValidadorEdadRango" runat="server" ErrorMessage="La edad debe ser entre 0 y 75 años, formato numérico."></asp:RangeValidator>
                 </div>
               </div>

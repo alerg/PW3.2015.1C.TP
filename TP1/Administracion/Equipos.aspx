@@ -12,7 +12,7 @@
                 <label for="InputName" class="col-sm-3 control-label">Nombre de Equipo</label>
                 <div class="col-sm-9">
                     <asp:TextBox ID="txtNombre" placeholder="Nombre" class="form-control" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator CssClass="alert" ID="RequiredFieldValidator4" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Equipo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="RequiredFieldValidator4" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Equipo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="form-group">
@@ -23,7 +23,7 @@
                            <asp:ListItem Text="Elija Toneo" Value="" />
                        </Items>
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator  Display="Dynamic" CssClass="alert" ID="RequiredFieldValidator6" EnableClientScript="true" runat="server" ErrorMessage="El torneo es obligatorio" ControlToValidate="ddlTorneo" >
+                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="RequiredFieldValidator6" EnableClientScript="true" runat="server" ErrorMessage="El torneo es obligatorio" ControlToValidate="ddlTorneo" >
                     </asp:RequiredFieldValidator>
                 </div>
               </div>
@@ -44,7 +44,7 @@
             </div>
         </div>
         <div class="hidden-xs col-sm-3 col-md-3">
-            <img  src="/Imagenes/messi.png" class="jugador"/>
+            <img alt="messi" class="img-responsive" src="/Imagenes/messi.png" class="jugador"/>
         </div>
         <div class="hidden-xs col-sm-2 col-md-2"></div>
         </div>
