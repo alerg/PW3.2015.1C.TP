@@ -31,7 +31,7 @@
             </div>
         </div>
         <div class="hidden-xs col-sm-3 col-md-3">
-            <img alt="messi" class="img-responsive" src="/Imagenes/messi.png" class="jugador"/>
+            <img alt="messi" class="img-responsive jugador" src="/Imagenes/messi.png"/>
         </div>
         <div class="col-md-2"></div>
         <div class="hidden-xs col-sm-2 col-md-2"></div>

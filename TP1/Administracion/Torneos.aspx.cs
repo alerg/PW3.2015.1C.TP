@@ -11,7 +11,14 @@ namespace TP1.Administracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (IsPostBack) {
+                Page.Validate();
+                if (Page.IsValid) {
+                    bool active = Request["chkactive"] == "on";
+                    Entidades.TorneoModel torneo = new Entidades.TorneoModel(this.txtNombre.Text, active);
+                    torneo.GuardarTorneo();
+                }
+            }
         }
     }
 }

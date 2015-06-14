@@ -18,11 +18,7 @@ namespace TP1
         {
             if (IsValid)
             {
-                using (TP1_PW3Entities context = new TP1_PW3Entities())
-                {
-                    context.comentarios.AddObject(new comentario { cNombre = txtName.Text, cEmail = txtEmail.Text, cDetalle = txtAMensaje.Text, cFecha = DateTime.Now.Date });
-                    context.SaveChanges();
-                }
+
             }
         }
     }
