@@ -14,11 +14,20 @@ namespace TP1.Administracion
         {
             if (IsPostBack)
             {
-                String nombre = txtNombre.Text;
-                int monto = int.Parse(txtMonto.Text);
-                int torneo = int.Parse(ddlTorneo.SelectedValue);
+                Page.Validate();
+                if(IsValid){
+                    String nombre = txtNombre.Text;
+                    int monto = int.Parse(txtMonto.Text);
+                    int torneo = int.Parse(ddlTorneo.SelectedValue);
 
-                EquipoModel equipo = new Entidades.EquipoModel(nombre, monto, torneo);
+                    try
+                    {
+                        EquipoModel equipo = new Entidades.EquipoModel(nombre, monto, torneo);
+                        equipo.GuardarEquipo();
+                    }catch(Exception exception){
+                        //Mostrar error
+                    }
+                }
             }
             else {
                 ddlTorneo.DataSource = Entidades.TorneoModel.ObtenerTorneos();

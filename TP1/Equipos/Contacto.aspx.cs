@@ -12,13 +12,31 @@ namespace TP1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-        }
-        protected void btnSubmit_Click(object sender, EventArgs e)
-        {
-            if (IsValid)
+            if (IsPostBack)
             {
-
+                Page.Validate();
+                if (IsValid)
+                {
+                    btnSubmit.Visible = false;
+                    if (ContactoModel.GuardarContacto(txtAMensaje.Text, txtEmail.Text, txtName.Text))
+                    {
+                        lblMensaje.CssClass = "correcto";
+                        lblMensaje.Text = "Messaje enviado";
+                    }
+                    else
+                    {
+                        lblMensaje.CssClass = "alert";
+                        lblMensaje.Text = "Ocurrió un error. Intentelo nuevamente.";
+                        btnSubmit.Visible = true;
+                    }
+                }
+                else
+                {
+                    lblMensaje.CssClass = "alert";
+                    lblMensaje.Text = "Complete los campos.";
+                    btnSubmit.Visible = true;
+                    //Mostrar mensjae completar datos
+                }
             }
         }
     }

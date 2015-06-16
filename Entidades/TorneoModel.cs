@@ -10,10 +10,15 @@ namespace Entidades
         private int idTorneo;
         private String nombre;
         private Boolean activo;
-        
+
         public int IdTorneo { get{ return idTorneo; }}
         public String Nombre { get{ return nombre; }}
         public Boolean Activo { get{ return activo; }}
+
+        public TorneoModel(int idTorneo, String nombre, Boolean activo): this(nombre, activo)
+        {
+            this.idTorneo = idTorneo;
+        }
 
         public TorneoModel(String nombre, Boolean activo) {
             if (String.IsNullOrEmpty(nombre)){

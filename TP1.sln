@@ -2,8 +2,13 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TP1", "TP1\TP1.csproj", "{D755F344-853E-4DAF-8F3B-82F0C85FE5C4}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4ABAF613-920D-443B-A70B-EA48BBF1E3B2} = {4ABAF613-920D-443B-A70B-EA48BBF1E3B2}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Entidades.csproj", "{8A782242-B795-4997-9844-CD0E67B34C51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebServiceTorneos", "WebServiceTorneos\WebServiceTorneos.csproj", "{4ABAF613-920D-443B-A70B-EA48BBF1E3B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +24,10 @@ Global
 		{8A782242-B795-4997-9844-CD0E67B34C51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A782242-B795-4997-9844-CD0E67B34C51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A782242-B795-4997-9844-CD0E67B34C51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4ABAF613-920D-443B-A70B-EA48BBF1E3B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4ABAF613-920D-443B-A70B-EA48BBF1E3B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4ABAF613-920D-443B-A70B-EA48BBF1E3B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4ABAF613-920D-443B-A70B-EA48BBF1E3B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

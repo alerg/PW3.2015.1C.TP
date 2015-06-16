@@ -2,12 +2,11 @@
 {
     margin-top:1%;
 }
+.tableAction
+{
+    border-bottom:1px;
+}
 .checkActive
 {
-    margin-left:10%;
-}
-.checkActive label
-{
-    margin-left:5%;
-    margin-bottom: 0px;
+    display:none;
 }

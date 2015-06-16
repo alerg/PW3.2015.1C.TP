@@ -18,8 +18,8 @@ using System.Runtime.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel1", "FK_Equipo_Torneo", "Torneo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Entidades.Torneo), "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entidades.Equipo), true)]
-[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel1", "FK_Jugador_Equipo", "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entidades.Equipo), "Jugador", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entidades.Jugador), true)]
+[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel", "FK_Equipo_Torneo", "Torneo", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(Entidades.Torneo), "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entidades.Equipo), true)]
+[assembly: EdmRelationshipAttribute("PW3_20152C_TP2_TorneosModel", "FK_Jugador_Equipo", "Equipo", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(Entidades.Equipo), "Jugador", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(Entidades.Jugador), true)]
 
 #endregion
 
@@ -181,7 +181,7 @@ namespace Entidades
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel1", Name="Contacto")]
+    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel", Name="Contacto")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Contacto : EntityObject
@@ -314,7 +314,7 @@ namespace Entidades
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel1", Name="Equipo")]
+    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel", Name="Equipo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Equipo : EntityObject
@@ -446,16 +446,16 @@ namespace Entidades
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel1", "FK_Equipo_Torneo", "Torneo")]
+        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel", "FK_Equipo_Torneo", "Torneo")]
         public Torneo Torneo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel1.FK_Equipo_Torneo", "Torneo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo", "Torneo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel1.FK_Equipo_Torneo", "Torneo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo", "Torneo").Value = value;
             }
         }
         /// <summary>
@@ -467,13 +467,13 @@ namespace Entidades
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel1.FK_Equipo_Torneo", "Torneo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo", "Torneo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel1.FK_Equipo_Torneo", "Torneo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Torneo>("PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo", "Torneo", value);
                 }
             }
         }
@@ -484,18 +484,18 @@ namespace Entidades
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel1", "FK_Jugador_Equipo", "Jugador")]
+        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel", "FK_Jugador_Equipo", "Jugador")]
         public EntityCollection<Jugador> Jugador
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jugador>("PW3_20152C_TP2_TorneosModel1.FK_Jugador_Equipo", "Jugador");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Jugador>("PW3_20152C_TP2_TorneosModel.FK_Jugador_Equipo", "Jugador");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jugador>("PW3_20152C_TP2_TorneosModel1.FK_Jugador_Equipo", "Jugador", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Jugador>("PW3_20152C_TP2_TorneosModel.FK_Jugador_Equipo", "Jugador", value);
                 }
             }
         }
@@ -506,7 +506,7 @@ namespace Entidades
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel1", Name="Jugador")]
+    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel", Name="Jugador")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Jugador : EntityObject
@@ -666,16 +666,16 @@ namespace Entidades
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel1", "FK_Jugador_Equipo", "Equipo")]
+        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel", "FK_Jugador_Equipo", "Equipo")]
         public Equipo Equipo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel1.FK_Jugador_Equipo", "Equipo").Value;
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel.FK_Jugador_Equipo", "Equipo").Value;
             }
             set
             {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel1.FK_Jugador_Equipo", "Equipo").Value = value;
+                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel.FK_Jugador_Equipo", "Equipo").Value = value;
             }
         }
         /// <summary>
@@ -687,13 +687,13 @@ namespace Entidades
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel1.FK_Jugador_Equipo", "Equipo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel.FK_Jugador_Equipo", "Equipo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel1.FK_Jugador_Equipo", "Equipo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Equipo>("PW3_20152C_TP2_TorneosModel.FK_Jugador_Equipo", "Equipo", value);
                 }
             }
         }
@@ -704,7 +704,7 @@ namespace Entidades
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel1", Name="Torneo")]
+    [EdmEntityTypeAttribute(NamespaceName="PW3_20152C_TP2_TorneosModel", Name="Torneo")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
     public partial class Torneo : EntityObject
@@ -814,18 +814,18 @@ namespace Entidades
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel1", "FK_Equipo_Torneo", "Equipo")]
+        [EdmRelationshipNavigationPropertyAttribute("PW3_20152C_TP2_TorneosModel", "FK_Equipo_Torneo", "Equipo")]
         public EntityCollection<Equipo> Equipo
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Equipo>("PW3_20152C_TP2_TorneosModel1.FK_Equipo_Torneo", "Equipo");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Equipo>("PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo", "Equipo");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Equipo>("PW3_20152C_TP2_TorneosModel1.FK_Equipo_Torneo", "Equipo", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Equipo>("PW3_20152C_TP2_TorneosModel.FK_Equipo_Torneo", "Equipo", value);
                 }
             }
         }

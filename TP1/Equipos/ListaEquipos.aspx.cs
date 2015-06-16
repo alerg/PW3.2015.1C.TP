@@ -12,14 +12,6 @@ namespace TP1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            gdvEquipos.DataSource = EquipoModel.CargaEquipos();
-            gdvEquipos.DataBind();
-        }
-
-        protected void OnCheckedState(object sender, EventArgs e)
-        {
-            Console.Write(e);
-            Console.Write(sender);
         }
     }
 }

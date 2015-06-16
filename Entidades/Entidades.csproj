@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContactoModel.cs" />
     <Compile Include="EquipoModel.cs" />
     <Compile Include="JugadorModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -52,7 +53,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Torneos.edmx</DependentUpon>
     </Compile>
-    <Compile Include="UsuarioModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config" />

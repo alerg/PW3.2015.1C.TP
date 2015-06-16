@@ -14,29 +14,23 @@
                     <form id="form1" runat="server">
                         <input type="hidden" id="currentPage" value="lista"/>
                         <div class="panel panel-primary">
-                            <div class="panel-heading">
-                                <h3 class="panel-title">Lista de Equipos</h3>
-                            </div>
-                            <div class="row">
-                                <div class="checkBlock col-xs-12 col-sm-3 col-md-3">
-                                    <!--<asp:RadioButton CssClass="checkActive" GroupName="TipoTorneo" AutoPostBack="true" ID="radTodos" runat="server" Text="Todos los torneos" OnCheckedChanged="OnCheckedState" />-->
-                                    <asp:RadioButton CssClass="checkActive" GroupName="TipoTorneo" AutoPostBack="true" Checked="true" ID="radActivo" runat="server" Text="Torneos activos" OnCheckedChanged="OnCheckedState" />
+                            <div class="panel-heading clearfix"> 
+                                <h4 class="panel-title pull-left" style="padding-top: 7.5px;">Lista de Equipos</h4>
+                                <div class="btn-group pull-right">
+                                    <button class="btn btn-default btn-filtro" type="button" data-toggle="button" id="btnFiltrar" name="btnFiltrar" title="Mostrar torneos inactivos"><i class="glyphicon glyphicon-filter icon-filter"></i></button>
+                                    <input class="checkActive" type="checkbox" id="chkMostrarInactivos" name="chkMostrarInactivos"/>
                                 </div>
-                                <div class="checkBlock col-xs-12 col-sm-3 col-md-3">
-                                    <asp:RadioButton CssClass="checkActive" GroupName="TipoTorneo" AutoPostBack="true" ID="radInactivo" runat="server" Text="Torneos inactivos" OnCheckedChanged="OnCheckedState" />
-                                </div>
-                                <div class="hidden-xs col-sm-6 col-md-6"></div>
                             </div>
                             <div class="panel-body">
-                                    <asp:GridView ID="gdvEquipos" runat="server" AutoGenerateColumns="False" EmptyDataText="No hay datos."
-                                        CssClass="table table-striped" GridLines="None" ShowHeaderWhenEmpty="True">
-                                        <AlternatingRowStyle />
-                                            <Columns>
-                                                <asp:BoundField DataField="idEquipo" HeaderText="#" />
-                                                <asp:BoundField DataField="eNombre" HeaderText="Nombre" />
-                                                <asp:BoundField DataField="eIdTorneo" HeaderText="Torneo" />
-                                            </Columns>
-                                    </asp:GridView>
+                                <table class="table" data-interactive="tabla">
+                                    <thead>
+                                        <tr>
+                                        <th>#</th>
+                                        <th>Equipo</th>
+                                        <th>Torneo</th>
+                                        </tr>
+                                    </thead>
+                                </table>
                             </div>
                         </div>
                     </form>
@@ -45,4 +39,7 @@
             </div>
         </div>
     </div>
+</asp:Content>
+<asp:Content ID="ContentFooter" ContentPlaceHolderID="ContentPlaceHolderFooterEquipo" runat="server">
+    <script type="text/javascript" src="/Scripts/listaEquipos.js"></script>
 </asp:Content>

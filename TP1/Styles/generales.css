@@ -87,3 +87,9 @@ div.formulario
     color: Red;
     font-weight: bold;
 }
+
+.correcto
+{
+    color: Green;
+    font-weight: bold;
+}
