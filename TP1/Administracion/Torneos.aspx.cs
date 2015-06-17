@@ -11,14 +11,26 @@ namespace TP1.Administracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack) {
+            if (IsPostBack)
+            {
                 Page.Validate();
-                if (Page.IsValid) {
+                if (Page.IsValid)
+                {
                     bool active = Request["chkactive"] == "on";
                     Entidades.TorneoModel torneo = new Entidades.TorneoModel(this.txtNombre.Text, active);
                     torneo.GuardarTorneo();
                 }
             }
+            else {
+                loadTorneos();
+            }
+        }
+
+        private void loadTorneos() {
+            lbTorneos.DataSource = Entidades.TorneoModel.ObtenerTorneos();
+            lbTorneos.DataValueField = "IdTorneo";
+            lbTorneos.DataTextField = "Nombre";
+            lbTorneos.DataBind();
         }
     }
 }

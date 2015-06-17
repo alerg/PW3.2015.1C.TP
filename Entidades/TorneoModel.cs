@@ -29,12 +29,12 @@ namespace Entidades
             }
         }
 
-        public static List<Torneo> ObtenerTorneos()
+        public static List<TorneoModel> ObtenerTorneos()
         {
             using(var torneosContext = new TorneosEntities()){
                 var datos = (from e in torneosContext.Torneo
                             select e).ToList();
-                return datos;
+                return EntidadAModelo(datos);
             }
         }
 
@@ -53,6 +53,17 @@ namespace Entidades
                     int result = torneosContext.SaveChanges();
                 }
             }
+        }
+
+        private static List<TorneoModel> EntidadAModelo(List<Torneo> torneos)
+        {
+            List<TorneoModel> retorno = new List<TorneoModel>();
+            foreach (var torneo in torneos)
+            {
+                TorneoModel torneoModel = new TorneoModel(torneo.Id, torneo.Nombre, torneo.Activo);
+                retorno.Add(torneoModel);
+            }
+            return retorno;
         }
     }
 }

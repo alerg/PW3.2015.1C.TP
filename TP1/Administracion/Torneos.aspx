@@ -6,8 +6,17 @@
     <div class="row containerWithHeader backgroundPasto">
         <div class="hidden-xs col-sm-2 col-md-2"></div>
         <div class="col-xs-12 col-sm-5 col-md-5">
-            <div class="container-fluid formulario">
             <form id="Form1" runat="server" class="form-horizontal" action="">
+            <div class="container-fluid formulario">
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <asp:ListBox ID="lbTorneos" runat="server"></asp:ListBox>
+                </div>
+                <div class="col-xs-6 col-sm-2 col-md-2">
+                    <button class="btn btn-default" type="button" id="btnEditar" name="btnEditar" title="Editar">Editar</button>
+                    <button class="btn btn-default" type="button" id="btnElinar" name="btnEliminar" title="Eliminar">Eliminar</button>
+                </div>
+            </div>
+            <div class="container-fluid formulario">
               <input type="hidden" id="currentPage" value="torneos"/>
               <div class="form-group">
                 <label for="txtNombre" class="col-sm-3 control-label">Torneo</label>
