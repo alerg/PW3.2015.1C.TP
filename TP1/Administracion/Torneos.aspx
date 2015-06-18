@@ -6,38 +6,46 @@
     <div class="row containerWithHeader backgroundPasto">
         <div class="hidden-xs col-sm-2 col-md-2"></div>
         <div class="col-xs-12 col-sm-5 col-md-5">
-            <form id="Form1" runat="server" class="form-horizontal" action="">
-            <div class="container-fluid formulario">
-                <div class="col-xs-6 col-sm-3 col-md-3">
-                    <asp:ListBox ID="lbTorneos" runat="server"></asp:ListBox>
+            <form id="Form1" runat="server">
+                <asp:HiddenField ID="hdnIdTorneo" runat="server" />
+            <div class="container-fluid acciones">
+                <div class="col-xs-6 col-sm-5 col-md-5">
+                    <asp:ListBox ID="lbTorneos" runat="server" CssClass="listaAcciones list-group"></asp:ListBox>
                 </div>
-                <div class="col-xs-6 col-sm-2 col-md-2">
-                    <button class="btn btn-default" type="button" id="btnEditar" name="btnEditar" title="Editar">Editar</button>
-                    <button class="btn btn-default" type="button" id="btnElinar" name="btnEliminar" title="Eliminar">Eliminar</button>
+                <div class="col-xs-6 col-sm-7 col-md-7">
+                    <div class="btn-group botonesAccines" role="group">    
+                        <button class="btn btn-default" type="button" id="btnCrear" name="btnCrear" title="Crear">Crear</button>
+                        <asp:Button runat="server" class="btn btn-warning" type="button" ID="btnEditar" 
+                            name="btnEditar" title="Editar" Text="Editar" onclick="btnEditar_Click" CausesValidation="false"/>
+                        <asp:Button runat="server" class="btn btn-danger" type="button" 
+                            ID="btnEliminar" name="btnEliminar" title="Eliminar" Text="Eliminar" CausesValidation="false" 
+                            onclick="btnEliminar_Click" />
+                    </div>
+                    <div ID="divWarning" data-interactive="divWarning" class="alert alert-warning" role="alert" runat="server"></div>
                 </div>
             </div>
-            <div class="container-fluid formulario">
+            <div runat="server" ID="divFormulario" class="container-fluid formulario">
               <input type="hidden" id="currentPage" value="torneos"/>
               <div class="form-group">
                 <label for="txtNombre" class="col-sm-3 control-label">Torneo</label>
                 <div class="col-sm-9">
-                    <asp:TextBox ID="txtNombre" placeholder="Ingrese Nombre del Torneo" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtNombre" data-Interactive="nombre" placeholder="Ingrese Nombre del Torneo" class="form-control" runat="server"></asp:TextBox>
                     <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="ValidadorToneoObligatorio" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Torneo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="form-group">
-                <label for="txtActivo" class="col-sm-3 control-label">Activo</label>
+                <label for="chkboxActive" class="col-sm-3 control-label">Activo</label>
                 <div class="col-sm-9">
-                    <input  type="checkbox" name="chkActive" id="chkActive" class="checkActive" checked="checked"/>
+                    <asp:CheckBox ID="chkboxActive" name="chkboxActive" runat="server"/>
                 </div>
               </div>
                 <div class="form-group">
-                    <div class="col-sm-offset-2 col-sm-10">
-                        <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" />
+                    <div class="col-sm-offset-2 col-sm-10 centrar">
+                        <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" onclick="btnGuardar_Click" />
                     </div>
                 </div>
-            </form>
             </div>
+            </form>
         </div>
         <div class="hidden-xs col-sm-3 col-md-3">
             <img alt="messi" class="img-responsive jugador" src="/Imagenes/messi.png"/>

@@ -31,7 +31,7 @@ namespace TP1.Administracion
             }
             else {
                 ddlTorneo.DataSource = Entidades.TorneoModel.ObtenerTorneos();
-                ddlTorneo.DataValueField = "Id";
+                ddlTorneo.DataValueField = "IdTorneo";
                 ddlTorneo.DataTextField = "Nombre";
                 ddlTorneo.DataBind();
             }

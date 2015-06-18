@@ -47,6 +47,16 @@ body {
 
 /*FIN FOOTER*/
 /*INICIO FORMULARIO*/
+
+.botonesAccines
+{
+    padding-top:4%;
+}
+
+.form-group
+{
+    height:40px;    
+}
 div.pasto
 {
     background-image:url("/Imagenes/pasto.png");
@@ -63,7 +73,21 @@ div.formulario
   border-style  : groove;
   border-radius: 10px;
   padding-top: 40px;
+  padding-bottom:40px;
 }
+
+div.acciones
+{
+  border-style  : groove;
+  border-radius: 10px;
+  padding-top: 10px;
+}
+
+.listaAcciones
+{
+    width:100%;
+}
+
 .backgroundPasto
 {
     background-image: url("../Imagenes/pasto.png");

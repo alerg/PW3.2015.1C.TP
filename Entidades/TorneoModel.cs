@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Data;
 
 namespace Entidades
 {
@@ -34,7 +35,7 @@ namespace Entidades
             using(var torneosContext = new TorneosEntities()){
                 var datos = (from e in torneosContext.Torneo
                             select e).ToList();
-                return EntidadAModelo(datos);
+                return EntidadesAModelos(datos);
             }
         }
 
@@ -45,25 +46,69 @@ namespace Entidades
             }else {
                 using (var torneosContext = new TorneosEntities())
                 {
-                    var torneo = new Torneo();
-                    torneo.Activo = this.Activo;
-                    torneo.Nombre = this.nombre;
-
-                    torneosContext.Torneo.AddObject(torneo);
+                    Torneo torneo;
+                    if (this.IdTorneo == 0)
+                    {
+                        torneo = new Torneo();
+                        torneo.Activo = this.Activo;
+                        torneo.Nombre = this.nombre;
+                        torneosContext.Torneo.AddObject(torneo);
+                    }
+                    else {
+                        torneo = (from e in torneosContext.Torneo
+                                  where e.Id == this.IdTorneo
+                                    select e).First();
+                        torneo.Activo = this.Activo;
+                        torneo.Nombre = this.nombre;
+                    }
                     int result = torneosContext.SaveChanges();
                 }
             }
         }
 
-        private static List<TorneoModel> EntidadAModelo(List<Torneo> torneos)
+        public static int Eliminar(int idTorneo)
+        {
+            using (var torneosContext = new TorneosEntities())
+            {
+                var equipos = torneosContext.Equipo.Where(e => e.IdTorneo == idTorneo).ToList();
+                equipos.ForEach(e => e.IdTorneo = null);
+                torneosContext.SaveChanges();
+
+                var torneo = (from t in torneosContext.Torneo
+                            where t.Id == idTorneo
+                            select t).ToList();
+                
+                torneosContext.DeleteObject(torneo[0]);
+                int result = torneosContext.SaveChanges();
+                return result;
+            }
+        }
+
+        public static TorneoModel ObtenerTorneo(int idTorneo)
+        {
+            using (var torneosContext = new TorneosEntities())
+            {
+                var torneo = (from e in torneosContext.Torneo
+                              where e.Id == idTorneo
+                             select e).First();
+                return EntidadAModelo(torneo);
+            }
+        }
+
+        private static List<TorneoModel> EntidadesAModelos(List<Torneo> torneos)
         {
             List<TorneoModel> retorno = new List<TorneoModel>();
             foreach (var torneo in torneos)
             {
-                TorneoModel torneoModel = new TorneoModel(torneo.Id, torneo.Nombre, torneo.Activo);
-                retorno.Add(torneoModel);
+                retorno.Add(EntidadAModelo(torneo));
             }
             return retorno;
+        }
+
+        private static TorneoModel EntidadAModelo(Torneo torneo)
+        {
+            TorneoModel torneoModel = new TorneoModel(torneo.Id, torneo.Nombre, torneo.Activo);
+            return torneoModel;
         }
     }
 }
