@@ -1,18 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="AdminNested.Master" AutoEventWireup="true" CodeBehind="Torneos.aspx.cs" Inherits="TP1.Administracion.Torneos" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <link href="/dist/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
-</asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row containerWithHeader backgroundPasto">
-        <div class="hidden-xs col-sm-2 col-md-2"></div>
-        <div class="col-xs-12 col-sm-5 col-md-5">
+        <div class="hidden-xs col-sm-1 col-md-1"></div>
+        <div class="col-xs-12 col-sm-7 col-md-7">
             <form id="Form1" runat="server">
                 <asp:HiddenField ID="hdnIdTorneo" runat="server" />
             <div class="container-fluid acciones">
-                <div class="col-xs-6 col-sm-5 col-md-5">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                     <asp:ListBox ID="lbTorneos" runat="server" CssClass="listaAcciones list-group"></asp:ListBox>
                 </div>
-                <div class="col-xs-6 col-sm-7 col-md-7">
+                <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="btn-group botonesAccines" role="group">    
                         <button class="btn btn-default" type="button" id="btnCrear" name="btnCrear" title="Crear">Crear</button>
                         <asp:Button runat="server" class="btn btn-warning" type="button" ID="btnEditar" 
@@ -50,11 +47,9 @@
         <div class="hidden-xs col-sm-3 col-md-3">
             <img alt="messi" class="img-responsive jugador" src="/Imagenes/messi.png"/>
         </div>
-        <div class="col-md-2"></div>
-        <div class="hidden-xs col-sm-2 col-md-2"></div>
+        <div class="hidden-xs col-sm-1 col-md-1"></div>
     </div>
 </asp:Content>
 <asp:Content ID="ContentFooter" ContentPlaceHolderID="ContentPlaceHolderFooterAdmin" runat="server">
-    <script type="text/javascript" src="/dist/js/bootstrap-switch.min.js"></script>
-    <script type="text/javascript" src="/Scripts/torneos.js"></script>
+    <script type="text/javascript" src="/Scripts/torneo.js"></script>
 </asp:Content>

@@ -21,6 +21,7 @@ namespace TP1.Administracion
         }
 
         private void loadTorneos() {
+            lbTorneos.Items.Clear();
             lbTorneos.DataSource = Entidades.TorneoModel.ObtenerTorneos();
             lbTorneos.DataValueField = "IdTorneo";
             lbTorneos.DataTextField = "Nombre";

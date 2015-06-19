@@ -20,7 +20,7 @@ namespace Entidades
         public int? IdTorneo { get { return _IdTorneo; } }
 
         public EquipoModel(String nombre, int? monto, int? idTorneo) {
-            if (String.IsNullOrEmpty(nombre) || monto ==null || idTorneo == null)
+            if (String.IsNullOrEmpty(nombre) || monto ==null)
             {
                 string message = String.Format("Error al crear EquipoModel - Nombre: {0} , Monto: {1}, IdTorneo: {2}", nombre, monto, idTorneo);
                 throw new Exception(message);
@@ -84,6 +84,33 @@ namespace Entidades
                 retorno.Add(equipoModel);
             }
             return retorno;
+        }
+
+        public static EquipoModel ObtenerEquipo(int idTorneo)
+        {
+            using (var torneosContext = new TorneosEntities())
+            {
+                var equipo = (from e in torneosContext.Equipo
+                              where e.Id == idTorneo
+                             select e).First();
+                return EntidadAModelo(equipo);
+            }
+        }
+
+        private static List<EquipoModel> EntidadesAModelos(List<Equipo> torneos)
+        {
+            List<EquipoModel> retorno = new List<EquipoModel>();
+            foreach (var torneo in torneos)
+            {
+                retorno.Add(EntidadAModelo(torneo));
+            }
+            return retorno;
+        }
+
+        private static EquipoModel EntidadAModelo(Equipo equipo)
+        {
+            EquipoModel EquipoModel = new EquipoModel(equipo.Id, equipo.Nombre, equipo.MontoAbonado, equipo.IdTorneo);
+            return EquipoModel;
         }
     }
 }

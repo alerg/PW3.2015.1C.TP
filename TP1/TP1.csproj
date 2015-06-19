@@ -67,6 +67,7 @@
     <Content Include="Imagenes\logo.jpg" />
     <Content Include="Equipos\ListaEquipos.aspx" />
     <Content Include="IndexMaster.aspx" />
+    <Content Include="Scripts\equipo.js" />
     <Content Include="Scripts\listaEquipos.js" />
     <Content Include="Scripts\header.js" />
     <Content Include="Styles\lista.css" />
@@ -75,7 +76,7 @@
     <Content Include="Scripts\jquery-1.4.1.js" />
     <Content Include="Scripts\jquery-1.4.1.min.js" />
     <Content Include="Scripts\jquery.min.js" />
-    <Content Include="Scripts\torneos.js" />
+    <Content Include="Scripts\torneo.js" />
     <Content Include="Scripts\validate.js" />
     <Content Include="Styles\generales.css" />
     <Content Include="ucFooter.ascx" />
