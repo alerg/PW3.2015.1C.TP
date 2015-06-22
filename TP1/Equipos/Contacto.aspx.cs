@@ -18,7 +18,7 @@ namespace TP1
                 if (IsValid)
                 {
                     btnSubmit.Visible = false;
-                    if (ContactoModel.GuardarContacto(txtAMensaje.Text, txtEmail.Text, txtName.Text))
+                    if (ContactoModel.GuardarContacto(txtAMensaje.Text, txtEmail.Text, txtNombre.Text))
                     {
                         lblMensaje.CssClass = "correcto";
                         lblMensaje.Text = "Messaje enviado";
@@ -38,6 +38,29 @@ namespace TP1
                     //Mostrar mensjae completar datos
                 }
             }
+        }
+
+        protected void CustomValidatorNombre_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = VerificarLongitud(args.Value.Length, txtNombre.MaxLength);
+        }
+
+        protected void CustomValidatorEmail_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = VerificarLongitud(args.Value.Length, txtEmail.MaxLength);
+        }
+
+        protected void CustomValidatorMensaje_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = VerificarLongitud(args.Value.Length, txtAMensaje.MaxLength);
+        }
+
+        private bool VerificarLongitud(int longitud, int maximaLongitud) {
+            if (longitud > maximaLongitud)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }
