@@ -5,8 +5,27 @@
     <div class="row containerWithHeader backgroundPasto">
         <div class="hidden-xs col-sm-2 col-md-2"></div>
         <div class="col-xs-12 col-sm-5 col-md-5">
-            <div class="container-fluid formulario">
-            <form runat="server" class="form-horizontal" action="">
+            <form id="Form1" runat="server" class="form-horizontal" action="">
+            <div class="container-fluid acciones">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <asp:ListBox data-interactive="lbEquipos" ID="lbEquipos" runat="server" CssClass="listaAcciones list-group" 
+                        OnSelectedIndexChanged="lbEquipos_Click" AutoPostBack="True"></asp:ListBox>
+                    <asp:ListBox data-interactive="lbJugadores" ID="lbJugadores" runat="server" CssClass="listaAcciones list-group"></asp:ListBox>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <div class="btn-group botonesAccines" role="group">    
+                        <asp:Button runat="server" class="btn btn-default" type="button" ID="btnCrear" name="btnCrear" title="Crear" Text="Crear" 
+                            onclick="btnCrear_Click" CausesValidation="false"/>
+                        <asp:Button runat="server" class="btn btn-warning" type="button" ID="btnEditar" 
+                            name="btnEditar" title="Editar" Text="Editar" onclick="btnEditar_Click" CausesValidation="false"/>
+                        <asp:Button runat="server" class="btn btn-danger" type="button" 
+                            ID="btnEliminar" name="btnEliminar" title="Eliminar" Text="Eliminar" CausesValidation="false" 
+                            onclick="btnEliminar_Click" />
+                    </div>
+                    <div ID="divWarning" data-interactive="divWarning" class="alert alert-warning" role="alert" runat="server"></div>
+                </div>
+            </div>
+            <div runat="server" ID="divFormulario" class="container-fluid formulario">
               <input type="hidden" id="currentPage" value="jugadores"/>
               <div class="form-group">
                 <label for="txtNombre" class="col-sm-3 control-label">Nombre</label>
@@ -35,21 +54,18 @@
               <div class="form-group">
                 <label for="ddlEquipo" class="col-sm-3 control-label">Equipo</label>
                 <div class="col-sm-9">
-                    <asp:DropDownList ID="ddlEquipo" class="form-control" placeholder="Equipo" runat="server" AppendDataBoundItems="true">
-                        <Items>
-                           <asp:ListItem Text="Elija Toneo" Value="" />
-                       </Items>
+                    <asp:DropDownList data-interactive="ddlEquipo" ID="ddlEquipo" class="form-control" placeholder="Equipo" runat="server" AppendDataBoundItems="true">
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="ValidadorEquipoObligatorio" Display="Dynamic" CssClass="alert" EnableClientScript="true" ControlToValidate="ddlEquipo" runat="server" ErrorMessage="Elija un equipo"></asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
-                    <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" />
+                    <asp:Button ID="btnGuardar" class="btn btn-primary" runat="server" Text="Guardar" onclick="btnGuardar_Click"/>
                 </div>
               </div>
-            </form>
             </div>
+            </form>
         </div>
         <div class="hidden-xs col-sm-3 col-md-3">
             <img class="img-responsive" alt="Messi" src="/Imagenes/messi.png"/>

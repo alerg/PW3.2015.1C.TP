@@ -57,20 +57,30 @@ namespace Entidades
             }
         }
 
-        public void GuardarEquipo()
+        public bool Guardar()
         {
             if (String.IsNullOrEmpty(_Nombre) || _IdTorneo == null || _Monto == null){
                 string message = String.Format("Error al guerdar EquipoModel - Nombre: {0} , Monto: {1}, IdTorneo: {2}", _Nombre, _IdTorneo, _Monto);
                 throw new Exception(message);
             }else {
                 using (var torneosContext = new TorneosEntities()) {
-                    var equipo = new Equipo();
-                    equipo.IdTorneo = this._IdTorneo;
+
+                    Equipo equipo;
+                    if (this.IdTorneo == 0)
+                    {
+                        equipo = new Equipo();
+                    }
+                    else
+                    {
+                        equipo = (from e in torneosContext.Equipo
+                                  where e.Id == this.IdEquipo
+                                  select e).First();
+                    }
                     equipo.Nombre = this._Nombre;
                     equipo.MontoAbonado = this._Monto;
-
-                    torneosContext.Equipo.AddObject(equipo);
-                    torneosContext.SaveChanges();
+                    torneosContext.Equipo.AddObject(equipo); 
+                    int result = torneosContext.SaveChanges();
+                    return result == 1;
                 }
             }
         }
@@ -111,6 +121,11 @@ namespace Entidades
         {
             EquipoModel EquipoModel = new EquipoModel(equipo.Id, equipo.Nombre, equipo.MontoAbonado, equipo.IdTorneo);
             return EquipoModel;
+        }
+
+        public static void Eliminar(int selectedValue)
+        {
+            throw new NotImplementedException();
         }
     }
 }

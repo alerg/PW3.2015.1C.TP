@@ -39,7 +39,7 @@ namespace Entidades
             }
         }
 
-        public void GuardarTorneo()
+        public bool Guardar()
         {
             if (String.IsNullOrEmpty(nombre)){
                 throw new Exception();
@@ -50,18 +50,20 @@ namespace Entidades
                     if (this.IdTorneo == 0)
                     {
                         torneo = new Torneo();
-                        torneo.Activo = this.Activo;
-                        torneo.Nombre = this.nombre;
-                        torneosContext.Torneo.AddObject(torneo);
                     }
                     else {
                         torneo = (from e in torneosContext.Torneo
                                   where e.Id == this.IdTorneo
                                     select e).First();
-                        torneo.Activo = this.Activo;
-                        torneo.Nombre = this.nombre;
+                    }
+                    torneo.Activo = this.Activo;
+                    torneo.Nombre = this.nombre;
+                    if (this.IdTorneo == null)
+                    {
+                        torneosContext.Torneo.AddObject(torneo);
                     }
                     int result = torneosContext.SaveChanges();
+                    return result == 1;
                 }
             }
         }

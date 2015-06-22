@@ -39,7 +39,7 @@ namespace TP1.Administracion
 
         private void loadTorneos(int? idTorneo)
         {
-            List<TorneoModel> torneos = Entidades.TorneoModel.ObtenerTorneos();
+            List<TorneoModel> torneos = TorneoModel.ObtenerTorneos();
             if (torneos.Count == 0)
             {
                 ListItem item = new ListItem("No hay torneos.");
@@ -71,7 +71,7 @@ namespace TP1.Administracion
             if (lbEquipos.SelectedItem != null)
             {
                 int selectedValue = int.Parse(lbEquipos.SelectedItem.Value);
-                Entidades.TorneoModel.Eliminar(selectedValue);
+                EquipoModel.Eliminar(selectedValue);
                 loadEquipos();
             }
             else
@@ -118,7 +118,7 @@ namespace TP1.Administracion
                     equipo = new Entidades.EquipoModel(nombre, monto, torneo);
                 }
                     
-                equipo.GuardarEquipo();
+                equipo.Guardar();
                 loadEquipos();
                 loadTorneos(torneo);
                 btnEditar.Enabled = true;

@@ -83,7 +83,7 @@ namespace TP1.Administracion
                 {
                     torneo = new Entidades.TorneoModel(this.txtNombre.Text, active);   
                 }
-                torneo.GuardarTorneo();
+                torneo.Guardar();
                 loadTorneos();
                 btnEditar.Enabled = true;
                 btnEliminar.Enabled = true;
