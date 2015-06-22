@@ -59,7 +59,7 @@ namespace Entidades
 
         public bool Guardar()
         {
-            if (String.IsNullOrEmpty(_Nombre) || _IdTorneo == null || _Monto == null){
+            if (String.IsNullOrEmpty(_Nombre) || _Monto == null){
                 string message = String.Format("Error al guerdar EquipoModel - Nombre: {0} , Monto: {1}, IdTorneo: {2}", _Nombre, _IdTorneo, _Monto);
                 throw new Exception(message);
             }else {

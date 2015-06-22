@@ -106,7 +106,10 @@ namespace TP1.Administracion
             if(IsValid){
                 String nombre = txtNombre.Text;
                 int monto = int.Parse(txtMonto.Text);
-                int torneo = int.Parse(ddlTorneo.SelectedValue);
+                int? torneo = null;
+                if(ddlTorneo.SelectedValue != "0"){
+                    torneo = int.Parse(ddlTorneo.SelectedValue);
+                }
                 int idEquipo = String.IsNullOrEmpty(hdnIdEquipo.Value) ? 0 : int.Parse(hdnIdEquipo.Value);
                 EquipoModel equipo;
                 if (idEquipo > 0)
@@ -146,6 +149,25 @@ namespace TP1.Administracion
             divWarning.Style.Add("display", "none");
             divFormulario.Style.Add("display", "block");
                 
+        }
+
+        protected void CustomValidatorNombre_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = VerificarLongitud(args.Value.Length, txtNombre.MaxLength);
+        }
+
+        protected void CustomValidatorMonto_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = VerificarLongitud(args.Value.Length, txtMonto.MaxLength);
+        }
+
+        private bool VerificarLongitud(int longitud, int maximaLongitud)
+        {
+            if (longitud > maximaLongitud)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

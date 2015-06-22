@@ -67,6 +67,8 @@
     <Content Include="Imagenes\logo.jpg" />
     <Content Include="Equipos\ListaEquipos.aspx" />
     <Content Include="IndexMaster.aspx" />
+    <Content Include="Scripts\contacto.js" />
+    <Content Include="Scripts\equipo.js" />
     <Content Include="Scripts\validador.js" />
     <Content Include="Scripts\jugador.js" />
     <Content Include="Scripts\listaEquipos.js" />

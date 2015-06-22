@@ -62,4 +62,5 @@
 </asp:Content>
 <asp:Content ID="ContentFooter" ContentPlaceHolderID="ContentPlaceHolderFooterEquipo" runat="server">
     <script type="text/javascript" src="/Scripts/validador.js"></script>
+    <script type="text/javascript" src="/Scripts/contacto.js"></script>
 </asp:Content>

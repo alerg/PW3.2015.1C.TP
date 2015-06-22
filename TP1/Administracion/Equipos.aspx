@@ -27,8 +27,10 @@
               <div class="form-group">
                 <label for="InputName" class="col-sm-3 control-label">Nombre de Equipo</label>
                 <div class="col-sm-9">
-                    <asp:TextBox ID="txtNombre" data-interactive="txtNombre" placeholder="Nombre" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtNombre" data-interactive="txtNombre" placeholder="Nombre" class="form-control" runat="server" MaxLength="30"></asp:TextBox>
                     <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="RequiredFieldValidator4" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Equipo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Longitud máxima es de 30" 
+                            onservervalidate="CustomValidatorNombre_ServerValidate" ControlToValidate="txtNombre" CssClass="alert"  ClientValidationFunction="validarLongitudNombre"></asp:CustomValidator>
                 </div>
               </div>
               <div class="form-group">
@@ -36,8 +38,6 @@
                 <div class="col-sm-9">
                     <asp:DropDownList ID="ddlTorneo" data-interactive="ddlTorneo" class="form-control" runat="server" AppendDataBoundItems="true">
                     </asp:DropDownList>
-                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="RequiredFieldValidator6" EnableClientScript="true" runat="server" ErrorMessage="El torneo es obligatorio" ControlToValidate="ddlTorneo" >
-                    </asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="form-group">
@@ -63,5 +63,6 @@
     </div>
 </asp:Content>
 <asp:Content ID="ContentFooter" ContentPlaceHolderID="ContentPlaceHolderFooterAdmin" runat="server">
+    <script type="text/javascript" src="/Scripts/validador.js"></script>
     <script type="text/javascript" src="/Scripts/equipo.js"></script>
 </asp:Content>
