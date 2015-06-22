@@ -149,7 +149,7 @@ namespace Entidades
                     jugador.Apellido = this.Apellido;
                     jugador.IdEquipo = (int)this.IdEquipo;
                     jugador.Edad = this.Edad;
-                    if (this.IdJugador == null){
+                    if (this.IdJugador == 0){
                         torneosContext.Jugador.AddObject(jugador);
                     }
                     int result = torneosContext.SaveChanges();

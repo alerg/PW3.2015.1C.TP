@@ -3,14 +3,18 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div class="row containerWithHeader backgroundPasto">
-        <div class="hidden-xs col-sm-2 col-md-2"></div>
-        <div class="col-xs-12 col-sm-5 col-md-5">
+        <div class="hidden-xs col-sm-1 col-md-1"></div>
+        <div class="col-xs-12 col-sm-7 col-md-7">
             <form id="Form1" runat="server" class="form-horizontal" action="">
             <div class="container-fluid acciones">
                 <div class="col-xs-6 col-sm-6 col-md-6">
+                    <asp:Label ID="Label1" runat="server" Text="Label">Seleccione equipo:</asp:Label>
                     <asp:ListBox data-interactive="lbEquipos" ID="lbEquipos" runat="server" CssClass="listaAcciones list-group" 
                         OnSelectedIndexChanged="lbEquipos_Click" AutoPostBack="True"></asp:ListBox>
-                    <asp:ListBox data-interactive="lbJugadores" ID="lbJugadores" runat="server" CssClass="listaAcciones list-group"></asp:ListBox>
+                    <div runat="server" id="divJugadores">
+                        <asp:Label ID="Label2" runat="server" Text="Label">Seleccione jugador:</asp:Label>
+                        <asp:ListBox data-interactive="lbJugadores" ID="lbJugadores" runat="server" CssClass="listaAcciones list-group"></asp:ListBox>
+                    </div>
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="btn-group botonesAccines" role="group">    
@@ -70,6 +74,6 @@
         <div class="hidden-xs col-sm-3 col-md-3">
             <img class="img-responsive" alt="Messi" src="/Imagenes/messi.png"/>
         </div>
-        <div class="hidden-xs col-sm-2 col-md-2"></div>
+        <div class="hidden-xs col-sm-1 col-md-1"></div>
     </div>
 </asp:Content>

@@ -12,14 +12,14 @@ namespace TP1.Administracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            divFormulario.Style.Add("display", "none");
+            divWarning.Style.Add("display", "none");
             if (!IsPostBack)
             {
                 btnCrear.Style.Add("display", "none");
                 btnEditar.Style.Add("display", "none");
                 btnEliminar.Style.Add("display", "none");
-                divWarning.Style.Add("display", "none");
-                divFormulario.Style.Add("display", "none");
-                lbJugadores.Style.Add("display", "none");
+                divJugadores.Style.Add("display", "none");
                 CargarEquipos(null);
             }
         }
@@ -109,7 +109,20 @@ namespace TP1.Administracion
                     verMensaje("Error al guardar Jugador");
                 }
                 else {
+                    int equipoSeleccionado = String.IsNullOrEmpty(lbEquipos.SelectedValue) ? 0 : int.Parse(lbEquipos.SelectedValue);
+                    if (jugadorModel.IdEquipo != equipoSeleccionado)
+                    {
+                        lbEquipos.ClearSelection();
+                        foreach (ListItem equipoItem in lbEquipos.Items)
+                        {
+                            if (equipoItem.Value == idEquipo.ToString())
+                            {
+                                equipoItem.Selected = true;
+                            }
+                        }
+                    }
                     CargarJugadores(jugadorModel.IdEquipo, (int?)jugadorModel.IdJugador);
+                    divFormulario.Style.Add("display", "block");
                 }
             }
         }
@@ -216,7 +229,7 @@ namespace TP1.Administracion
         {
             int? equipoSeleccionado = int.Parse(lbEquipos.SelectedValue);
             CargarJugadores(equipoSeleccionado, null);
-            lbJugadores.Style.Add("display", "block");
+            divJugadores.Style.Add("display", "block");
         }
     }
 }
