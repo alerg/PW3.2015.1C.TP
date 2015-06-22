@@ -40,6 +40,15 @@ namespace TP1.Administracion {
         protected global::System.Web.UI.WebControls.ListBox lbEquipos;
         
         /// <summary>
+        /// btnCrear control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCrear;
+        
+        /// <summary>
         /// btnEditar control.
         /// </summary>
         /// <remarks>

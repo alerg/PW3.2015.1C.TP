@@ -136,5 +136,16 @@ namespace TP1.Administracion
             divWarning.InnerText = mensaje;
             divWarning.Style.Add("display", "block");
         }
+
+        protected void btnCrear_Click(object sender, EventArgs e)
+        {
+            txtMonto.Text = "";
+            txtNombre.Text = "";
+            ddlTorneo.ClearSelection();
+            hdnIdEquipo.Value = "";
+            divWarning.Style.Add("display", "none");
+            divFormulario.Style.Add("display", "block");
+                
+        }
     }
 }

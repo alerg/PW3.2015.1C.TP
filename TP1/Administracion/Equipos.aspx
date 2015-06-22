@@ -11,7 +11,8 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-6">
                     <div class="btn-group botonesAccines" role="group">    
-                        <button class="btn btn-default" type="button" id="btnCrear" name="btnCrear" title="Crear">Crear</button>
+                        <asp:Button runat="server" class="btn btn-default" type="button" ID="btnCrear" 
+                            name="btnCrear" title="Crear" Text="Crear" onclick="btnCrear_Click" CausesValidation="false"/>
                         <asp:Button runat="server" class="btn btn-warning" type="button" ID="btnEditar" 
                             name="btnEditar" title="Editar" Text="Editar" onclick="btnEditar_Click" CausesValidation="false"/>
                         <asp:Button runat="server" class="btn btn-danger" type="button" 

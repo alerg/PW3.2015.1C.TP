@@ -110,6 +110,7 @@ div.acciones
 {
     color: Red;
     font-weight: bold;
+    display:none;
 }
 
 .correcto

@@ -58,7 +58,7 @@ namespace Entidades
                     }
                     torneo.Activo = this.Activo;
                     torneo.Nombre = this.nombre;
-                    if (this.IdTorneo == null)
+                    if (this.IdTorneo == 0)
                     {
                         torneosContext.Torneo.AddObject(torneo);
                     }

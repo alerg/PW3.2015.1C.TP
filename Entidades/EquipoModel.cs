@@ -66,7 +66,7 @@ namespace Entidades
                 using (var torneosContext = new TorneosEntities()) {
 
                     Equipo equipo;
-                    if (this.IdTorneo == 0)
+                    if (this.IdEquipo == 0)
                     {
                         equipo = new Equipo();
                     }
@@ -78,7 +78,10 @@ namespace Entidades
                     }
                     equipo.Nombre = this._Nombre;
                     equipo.MontoAbonado = this._Monto;
-                    torneosContext.Equipo.AddObject(equipo); 
+                    equipo.IdTorneo = this._IdTorneo;
+                    if(equipo.Id == 0){
+                        torneosContext.Equipo.AddObject(equipo); 
+                    }
                     int result = torneosContext.SaveChanges();
                     return result == 1;
                 }
@@ -123,9 +126,18 @@ namespace Entidades
             return EquipoModel;
         }
 
-        public static void Eliminar(int selectedValue)
+        public static bool Eliminar(int idEquipo)
         {
-            throw new NotImplementedException();
+            using (var torneosContext = new TorneosEntities())
+            {
+                var equipo = (from e in torneosContext.Equipo
+                              where e.Id == idEquipo
+                              select e).ToList();
+
+                torneosContext.DeleteObject(equipo[0]);
+                int result = torneosContext.SaveChanges();
+                return result == 1;
+            }
         }
     }
 }

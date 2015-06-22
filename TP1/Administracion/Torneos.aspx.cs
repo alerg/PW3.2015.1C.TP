@@ -12,9 +12,9 @@ namespace TP1.Administracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            divWarning.Style.Add("display", "none");
             if (!IsPostBack)
             {
-                divWarning.Style.Add("display", "none");
                 divFormulario.Style.Add("display", "none");
                 loadTorneos();
             }
@@ -49,6 +49,16 @@ namespace TP1.Administracion
             }
         }
 
+        protected void btnCrear_Click(object sender, EventArgs e)
+        {
+            txtNombre.Text = "";
+            chkboxActive.Checked = true;
+            hdnIdTorneo.Value = "";
+            divWarning.Style.Add("display", "none");
+            divFormulario.Style.Add("display", "block");
+
+        }
+
         protected void btnEditar_Click(object sender, EventArgs e)
         {
             if (lbTorneos.SelectedItem != null)
@@ -72,7 +82,8 @@ namespace TP1.Administracion
             if (Page.IsValid)
             {
                 bool active = chkboxActive.Checked;
-                int idTorneo = int.Parse(hdnIdTorneo.Value);
+
+                int idTorneo = String.IsNullOrEmpty(hdnIdTorneo.Value) ? 0 : int.Parse(hdnIdTorneo.Value);
                 Entidades.TorneoModel torneo;
 
                 if (idTorneo > 0)
