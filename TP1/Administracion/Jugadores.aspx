@@ -34,33 +34,35 @@
               <div class="form-group">
                 <label for="txtNombre" class="col-sm-3 control-label">Nombre</label>
                 <div class="col-sm-9">
-                    <asp:TextBox ID="txtNombre" class="form-control" placeholder="Nombre" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtNombre" data-interactive="txtNombre" class="form-control" placeholder="Nombre" runat="server" MaxLength="30"></asp:TextBox>
                     <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="ValidadorNombreObligatoria" EnableClientScript="true" runat="server" ErrorMessage="El Nombre es obligatorio" ControlToValidate="txtNombre" >
                     </asp:RequiredFieldValidator>
+                    <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Longitud máxima es de 30" 
+                            onservervalidate="CustomValidatorNombre_ServerValidate" ControlToValidate="txtNombre" CssClass="alert"  ClientValidationFunction="validarLongitudNombre"></asp:CustomValidator>
                 </div>
               </div>
               <div class="form-group">
                 <label for="txtApellido" class="col-sm-3 control-label">Apellido</label>
                 <div class="col-sm-9">
-                  <asp:TextBox ID="txtApellido" class="form-control" placeholder="Apellido" runat="server"></asp:TextBox>
-                  <asp:RequiredFieldValidator  Display="Dynamic" CssClass="alert" ID="ValidadorApellidoObligatoria" EnableClientScript="true" runat="server" ErrorMessage="El Apellido es obligatorio" ControlToValidate="txtApellido" >
-                    </asp:RequiredFieldValidator>
+                  <asp:TextBox ID="txtApellido" data-interactive="txtApellido" class="form-control" placeholder="Apellido" runat="server" MaxLength="30"></asp:TextBox>
+                  <asp:RequiredFieldValidator  Display="Dynamic" CssClass="alert" ID="ValidadorApellidoObligatoria" EnableClientScript="true" runat="server" ErrorMessage="El Apellido es obligatorio" ControlToValidate="txtApellido" ></asp:RequiredFieldValidator>
+                  <asp:CustomValidator ID="CustomValidator2" runat="server" ErrorMessage="Longitud máxima es de 30" 
+                    onservervalidate="CustomValidatorApellido_ServerValidate" ControlToValidate="txtApellido" CssClass="alert"  ClientValidationFunction="validarLongitudApellido"></asp:CustomValidator>
                 </div>
               </div>
               <div class="form-group">
                 <label for="txtEdad" class="col-sm-3 control-label">Edad</label>
                 <div class="col-sm-9">
-                  <asp:TextBox ID="txtEdad" class="form-control" placeholder="Edad" runat="server"></asp:TextBox>
+                  <asp:TextBox ID="txtEdad" class="form-control" placeholder="Edad" runat="server" MaxLength="2"></asp:TextBox>
                   <asp:RequiredFieldValidator ID="ValidadorEdadObligatoria" Display="Dynamic" CssClass="alert" EnableClientScript="true" ControlToValidate="txtEdad" runat="server" ErrorMessage="La Edad es obligatoria"></asp:RequiredFieldValidator>
-                  <asp:RangeValidator ControlToValidate="txtEdad"  Display="Dynamic" CssClass="alert" MinimumValue="0" MaximumValue="75" ID="ValidadorEdadRango" runat="server" ErrorMessage="La edad debe ser entre 0 y 75 años, formato numérico."></asp:RangeValidator>
+                  <asp:RangeValidator ControlToValidate="txtEdad"  Display="Dynamic" CssClass="alert" MinimumValue="15" MaximumValue="75" ID="ValidadorEdadRango" runat="server" ErrorMessage="La edad debe ser entre 15 y 75 años, formato numérico."></asp:RangeValidator>
                 </div>
               </div>
               <div class="form-group">
                 <label for="ddlEquipo" class="col-sm-3 control-label">Equipo</label>
                 <div class="col-sm-9">
-                    <asp:DropDownList data-interactive="ddlEquipo" ID="ddlEquipo" class="form-control" placeholder="Equipo" runat="server" AppendDataBoundItems="true">
-                    </asp:DropDownList>
-                    <asp:RequiredFieldValidator ID="ValidadorEquipoObligatorio" Display="Dynamic" CssClass="alert" EnableClientScript="true" ControlToValidate="ddlEquipo" runat="server" ErrorMessage="Elija un equipo"></asp:RequiredFieldValidator>
+                    <asp:DropDownList data-interactive="ddlEquipo" ID="ddlEquipo" class="form-control" placeholder="Equipo" runat="server" AppendDataBoundItems="true"></asp:DropDownList>
+                    <asp:CompareValidator ID="CompareValidator1"  Operator="NotEqual" ValueToCompare="Elija un equipo" ForeColor="Red" runat="server" Display="Dynamic" CssClass="alert" EnableClientScript="true" ControlToValidate="ddlEquipo" ErrorMessage="Elija un equipo"></asp:CompareValidator>
                 </div>
               </div>
               <div class="form-group">
@@ -76,4 +78,8 @@
         </div>
         <div class="hidden-xs col-sm-1 col-md-1"></div>
     </div>
+</asp:Content>
+<asp:Content ID="ContentFooter" ContentPlaceHolderID="ContentPlaceHolderFooterAdmin" runat="server">
+    <script type="text/javascript" src="/Scripts/validador.js"></script>
+    <script type="text/javascript" src="/Scripts/jugador.js"></script>
 </asp:Content>

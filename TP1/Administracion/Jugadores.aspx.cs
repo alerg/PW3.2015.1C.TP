@@ -206,7 +206,7 @@ namespace TP1.Administracion
             ddlEquipo.DataValueField = "IdEquipo";
             ddlEquipo.DataTextField = "Nombre";
             if (idEquipo == null) {
-                ListItem item = new ListItem("Elija un equipo", "0");
+                ListItem item = new ListItem("Elija un equipo");
                 item.Enabled = true;
                 item.Selected = true;
                 ddlEquipo.Items.Add(item);
@@ -230,6 +230,25 @@ namespace TP1.Administracion
             int? equipoSeleccionado = int.Parse(lbEquipos.SelectedValue);
             CargarJugadores(equipoSeleccionado, null);
             divJugadores.Style.Add("display", "block");
+        }
+
+        protected void CustomValidatorNombre_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = VerificarLongitud(args.Value.Length, txtNombre.MaxLength);
+        }
+
+        protected void CustomValidatorApellido_ServerValidate(object source, ServerValidateEventArgs args)
+        {
+            args.IsValid = VerificarLongitud(args.Value.Length, txtApellido.MaxLength);
+        }
+
+        private bool VerificarLongitud(int longitud, int maximaLongitud)
+        {
+            if (longitud > maximaLongitud)
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

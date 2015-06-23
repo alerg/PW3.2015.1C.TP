@@ -130,7 +130,7 @@ namespace Entidades
 
         public bool Guardar()
         {
-            if (String.IsNullOrEmpty(this.Nombre) || String.IsNullOrEmpty(this.Apellido)){
+            if (String.IsNullOrEmpty(this.Nombre) || String.IsNullOrEmpty(this.Apellido) || this._IdEquipo == 0){
                 throw new Exception();
             }
             else{

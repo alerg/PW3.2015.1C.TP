@@ -49,6 +49,15 @@ namespace TP1.Administracion {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl divJugadores;
         
         /// <summary>
+        /// Label2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
         /// lbJugadores control.
         /// </summary>
         /// <remarks>
@@ -121,6 +130,15 @@ namespace TP1.Administracion {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorNombreObligatoria;
         
         /// <summary>
+        /// CustomValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
+        
+        /// <summary>
         /// txtApellido control.
         /// </summary>
         /// <remarks>
@@ -137,6 +155,15 @@ namespace TP1.Administracion {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorApellidoObligatoria;
+        
+        /// <summary>
+        /// CustomValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator2;
         
         /// <summary>
         /// txtEdad control.
@@ -175,13 +202,13 @@ namespace TP1.Administracion {
         protected global::System.Web.UI.WebControls.DropDownList ddlEquipo;
         
         /// <summary>
-        /// ValidadorEquipoObligatorio control.
+        /// CompareValidator1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator ValidadorEquipoObligatorio;
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
         
         /// <summary>
         /// btnGuardar control.
