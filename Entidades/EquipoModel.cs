@@ -130,6 +130,13 @@ namespace Entidades
         {
             using (var torneosContext = new TorneosEntities())
             {
+                var jugador = (from j in torneosContext.Jugador
+                               where j.IdEquipo == idEquipo
+                               select j).ToList();
+                foreach (var jug in jugador)
+                {
+                    torneosContext.DeleteObject(jug);
+                }
                 var equipo = (from e in torneosContext.Equipo
                               where e.Id == idEquipo
                               select e).ToList();

@@ -17,7 +17,7 @@
                             name="btnEditar" title="Editar" Text="Editar" onclick="btnEditar_Click" CausesValidation="false"/>
                         <asp:Button runat="server" class="btn btn-danger" type="button" 
                             ID="btnEliminar" name="btnEliminar" title="Eliminar" Text="Eliminar" CausesValidation="false" 
-                            onclick="btnEliminar_Click" />
+                            onclick="btnEliminar_Click" OnClientClick="javascript:if(!confirm('¿Esta seguro que desea borrar este torneo?'))return false" />
                     </div>
                     <div ID="divWarning" data-interactive="divWarning" class="alert alert-warning" role="alert" runat="server"></div>
                 </div>
