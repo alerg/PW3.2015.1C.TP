@@ -1,3 +1,4 @@
+C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\bin\WebServiceTorneos.dll
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\bin\WebServiceTorneos.pdb
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\bin\Entidades.dll
@@ -5,6 +6,5 @@ C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\b
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\bin\Entidades.pdb
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\bin\Newtonsoft.Json.pdb
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\bin\Newtonsoft.Json.xml
-C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\obj\Debug\WebServiceTorneos.dll
 C:\Documents and Settings\aleg\My Documents\Proyectos\progw3\WebServiceTorneos\obj\Debug\WebServiceTorneos.pdb

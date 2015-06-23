@@ -28,9 +28,9 @@
                 <label for="InputName" class="col-sm-3 control-label">Nombre de Equipo</label>
                 <div class="col-sm-9">
                     <asp:TextBox ID="txtNombre" data-interactive="txtNombre" placeholder="Nombre" class="form-control" runat="server" MaxLength="30"></asp:TextBox>
-                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="RequiredFieldValidator4" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Equipo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert-error" ID="RequiredFieldValidator4" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Equipo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                     <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="Longitud máxima es de 30" 
-                            onservervalidate="CustomValidatorNombre_ServerValidate" ControlToValidate="txtNombre" CssClass="alert"  ClientValidationFunction="validarLongitudNombre"></asp:CustomValidator>
+                            onservervalidate="CustomValidatorNombre_ServerValidate" ControlToValidate="txtNombre" CssClass="alert-error"  ClientValidationFunction="validarLongitudNombre"></asp:CustomValidator>
                 </div>
               </div>
               <div class="form-group">
@@ -44,8 +44,8 @@
                 <label for="InputMonto" class="col-sm-3 control-label">Monto</label>
                 <div class="col-sm-9">
                     <asp:TextBox ID="txtMonto" data-interactive="txtMonto" placeholder="Monto" class="form-control" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="alert" Display="Dynamic" EnableClientScript="true" ControlToValidate="txtMonto" runat="server" ErrorMessage="El Monto es obligatorio"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator  Display="Dynamic" CssClass="alert" ID="RegularExpressionValidator1" EnableClientScript="true" ControlToValidate="txtMonto" runat="server" ErrorMessage="Formato de moneda invalido. Debe ser 10.00." ValidationExpression="^\d+(\.\d\d)?$"></asp:RegularExpressionValidator>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="alert-error" Display="Dynamic" EnableClientScript="true" ControlToValidate="txtMonto" runat="server" ErrorMessage="El Monto es obligatorio"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator  Display="Dynamic" CssClass="alert-error" ID="RegularExpressionValidator1" EnableClientScript="true" ControlToValidate="txtMonto" runat="server" ErrorMessage="Formato de moneda invalido. Debe ser 10.00." ValidationExpression="^\d+(\.\d\d)?$"></asp:RegularExpressionValidator>
                 </div>
               </div>
               <div class="form-group">

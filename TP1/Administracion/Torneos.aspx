@@ -28,7 +28,7 @@
                 <label for="txtNombre" class="col-sm-3 control-label">Torneo</label>
                 <div class="col-sm-9">
                     <asp:TextBox ID="txtNombre" data-Interactive="nombre" placeholder="Ingrese Nombre del Torneo" class="form-control" runat="server"></asp:TextBox>
-                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert" ID="ValidadorToneoObligatorio" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Torneo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
+                    <asp:RequiredFieldValidator Display="Dynamic" CssClass="alert-error" ID="ValidadorToneoObligatorio" EnableClientScript="true" runat="server" ErrorMessage="El Nombre del Torneo es obligatorio" ControlToValidate="txtNombre"></asp:RequiredFieldValidator>
                 </div>
               </div>
               <div class="form-group">

@@ -60,6 +60,7 @@
     <Content Include="dist\css\bootstrap.min.css" />
     <Content Include="dist\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="dist\js\bootstrap.min.js" />
+    <Content Include="Equipos\contacto-resultado.aspx" />
     <Content Include="Equipos\Contacto.aspx" />
     <Content Include="Administracion\Equipos.aspx" />
     <Content Include="Administracion\Jugadores.aspx" />
@@ -105,6 +106,13 @@
     </Compile>
     <Compile Include="Administracion\Torneos.aspx.designer.cs">
       <DependentUpon>Torneos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\contacto-resultado.aspx.cs">
+      <DependentUpon>contacto-resultado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Equipos\contacto-resultado.aspx.designer.cs">
+      <DependentUpon>contacto-resultado.aspx</DependentUpon>
     </Compile>
     <Compile Include="Equipos\Contacto.aspx.cs">
       <DependentUpon>Contacto.aspx</DependentUpon>

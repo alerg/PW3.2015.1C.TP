@@ -20,8 +20,7 @@ namespace TP1
                     btnSubmit.Visible = false;
                     if (ContactoModel.GuardarContacto(txtAMensaje.Text, txtEmail.Text, txtNombre.Text))
                     {
-                        lblMensaje.CssClass = "correcto";
-                        lblMensaje.Text = "Messaje enviado";
+                        Response.Redirect("contacto-resultado.aspx");
                     }
                     else
                     {

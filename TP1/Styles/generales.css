@@ -67,8 +67,8 @@ div.formulario
 {
   border-style  : groove;
   border-radius: 10px;
-  padding-top: 40px;
-  padding-bottom:40px;
+  padding-top: 20px;
+  padding-bottom:20px;
   background-color:White;
 }
 
@@ -107,7 +107,7 @@ div.acciones
     margin-top: 60px;
 }
 
-.alert
+.alert-error
 {
     color: Red;
     font-weight: bold;
