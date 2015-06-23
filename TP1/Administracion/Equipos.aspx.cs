@@ -12,10 +12,10 @@ namespace TP1.Administracion
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            divWarning.Style.Add("display", "none");
+            divFormulario.Style.Add("display", "none");
             if (!IsPostBack)
             {
-                divWarning.Style.Add("display", "none");
-                divFormulario.Style.Add("display", "none");
                 loadEquipos();
                 loadTorneos(null);
             }

@@ -58,8 +58,8 @@ namespace TP1.Administracion
 
         protected void btnEditar_Click(object sender, EventArgs e)
         {
-            int equipoSeleccionado  = String.IsNullOrEmpty(lbJugadores.SelectedItem.Value) ? 0 : int.Parse(lbEquipos.SelectedItem.Value);
-            int jugadorSeleccionado = String.IsNullOrEmpty(lbJugadores.SelectedItem.Value) ? 0 : int.Parse(lbJugadores.SelectedItem.Value);
+            int equipoSeleccionado = String.IsNullOrEmpty(lbEquipos.SelectedItem.Value) ? 0 : int.Parse(lbEquipos.SelectedItem.Value);
+            int jugadorSeleccionado = lbJugadores.SelectedItem == null || String.IsNullOrEmpty(lbJugadores.SelectedItem.Value) ? 0 : int.Parse(lbJugadores.SelectedItem.Value);
             if (equipoSeleccionado > 0 && jugadorSeleccionado > 0)
             {
                 JugadorModel jugador = JugadorModel.ObtenerJugador(jugadorSeleccionado);

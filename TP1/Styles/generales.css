@@ -114,6 +114,10 @@ div.acciones
     display:none;
 }
 
+.alert-warning {
+  font-weight: bold;
+}
+
 .correcto
 {
     color: Green;

@@ -19,9 +19,9 @@
                             ID="btnEliminar" name="btnEliminar" title="Eliminar" Text="Eliminar" CausesValidation="false" 
                             onclick="btnEliminar_Click" OnClientClick="javascript:if(!confirm('¿Esta seguro que desea borrar este torneo?'))return false" />
                     </div>
-                    <div ID="divWarning" data-interactive="divWarning" class="alert alert-warning" role="alert" runat="server"></div>
                 </div>
             </div>
+            <div ID="divWarning" data-interactive="divWarning" class="alert alert-warning" role="alert" runat="server"></div>
             <div runat="server" ID="divFormulario" class="container-fluid formulario">
               <input type="hidden" id="currentPage" value="torneos"/>
               <div class="form-group">
