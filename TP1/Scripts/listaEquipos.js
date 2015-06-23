@@ -10,7 +10,7 @@
         td.innerText = equipos[index].Nombre;
         tr.appendChild(td);
         td = document.createElement('td');
-        td.innerText = equipos[index].IdTorneo;
+        td.innerText = equipos[index].torneo? equipos[index].torneo.Nombre : "";
         tr.appendChild(td);
         $(tbody).append(tr);
     }

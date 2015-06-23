@@ -14,10 +14,13 @@ namespace Entidades
         private int? _Monto;
         private int? _IdTorneo;
 
+        private TorneoModel _Torneo;
+
         public int IdEquipo { get { return _IdEquipo; } }
         public String Nombre { get { return _Nombre; } }
         public int? Monto { get { return _Monto; } }
         public int? IdTorneo { get { return _IdTorneo; } }
+        public TorneoModel torneo { get { return _Torneo; } }
 
         public EquipoModel(String nombre, int? monto, int? idTorneo) {
             if (String.IsNullOrEmpty(nombre) || monto ==null)
@@ -94,6 +97,10 @@ namespace Entidades
             foreach (var equipo in equipos)
             {
                 EquipoModel equipoModel = new EquipoModel(equipo.Id, equipo.Nombre, equipo.MontoAbonado, equipo.IdTorneo);
+                if (equipo.IdTorneo != null) {
+                    equipoModel._Torneo = new TorneoModel(equipo.Torneo.Id, equipo.Torneo.Nombre, equipo.Torneo.Activo);    
+                }
+                
                 retorno.Add(equipoModel);
             }
             return retorno;
