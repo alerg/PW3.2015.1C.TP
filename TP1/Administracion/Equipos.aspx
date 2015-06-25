@@ -43,9 +43,10 @@
               <div class="form-group">
                 <label for="InputMonto" class="col-sm-3 control-label">Monto</label>
                 <div class="col-sm-9">
-                    <asp:TextBox ID="txtMonto" data-interactive="txtMonto" placeholder="Monto" class="form-control" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtMonto" data-interactive="txtMonto" placeholder="Monto" class="form-control" runat="server" MaxLength="13"></asp:TextBox>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" CssClass="alert-error" Display="Dynamic" EnableClientScript="true" ControlToValidate="txtMonto" runat="server" ErrorMessage="El Monto es obligatorio"></asp:RequiredFieldValidator>
-                    <asp:RegularExpressionValidator  Display="Dynamic" CssClass="alert-error" ID="RegularExpressionValidator1" EnableClientScript="true" ControlToValidate="txtMonto" runat="server" ErrorMessage="Formato de moneda invalido. Debe ser 10.00." ValidationExpression="^\d+(\.\d\d)?$"></asp:RegularExpressionValidator>
+                    <asp:RegularExpressionValidator  Display="Dynamic" CssClass="alert-error" ID="RegularExpressionValidator1" EnableClientScript="true" ControlToValidate="txtMonto" runat="server" ErrorMessage="Formato de moneda invalido. Debe ser Entero. Ej: 1000" ValidationExpression="^\d+?$"></asp:RegularExpressionValidator>
+                    <asp:RangeValidator Display="Dynamic" ID="RangeValidator1" CssClass="alert-error" runat="server" EnableClientScript="true" ErrorMessage="El monto debe ser mayor a 0 y menor a 2.147.483.647" ControlToValidate="txtMonto" MaximumValue="2147483647" MinimumValue="0"></asp:RangeValidator>
                 </div>
               </div>
               <div class="form-group">

@@ -12,31 +12,6 @@ namespace TP1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (IsPostBack)
-            {
-                Page.Validate();
-                if (IsValid)
-                {
-                    btnSubmit.Visible = false;
-                    if (ContactoModel.GuardarContacto(txtAMensaje.Text, txtEmail.Text, txtNombre.Text))
-                    {
-                        Response.Redirect("contacto-resultado.aspx");
-                    }
-                    else
-                    {
-                        lblMensaje.CssClass = "alert";
-                        lblMensaje.Text = "Ocurrió un error. Intentelo nuevamente.";
-                        btnSubmit.Visible = true;
-                    }
-                }
-                else
-                {
-                    lblMensaje.CssClass = "alert";
-                    lblMensaje.Text = "Complete los campos.";
-                    btnSubmit.Visible = true;
-                    //Mostrar mensjae completar datos
-                }
-            }
         }
 
         protected void CustomValidatorNombre_ServerValidate(object source, ServerValidateEventArgs args)
@@ -60,6 +35,32 @@ namespace TP1
                 return false;
             }
             return true;
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            Page.Validate();
+            if (IsValid)
+            {
+                btnSubmit.Visible = false;
+                if (ContactoModel.GuardarContacto(txtAMensaje.Text, txtEmail.Text, txtNombre.Text))
+                {
+                    Response.Redirect("contacto-resultado.aspx");
+                }
+                else
+                {
+                    lblMensaje.CssClass = "alert";
+                    lblMensaje.Text = "Ocurrió un error. Intentelo nuevamente.";
+                    btnSubmit.Visible = true;
+                }
+            }
+            else
+            {
+                lblMensaje.CssClass = "alert";
+                lblMensaje.Text = "Complete los campos.";
+                btnSubmit.Visible = true;
+                //Mostrar mensjae completar datos
+            }
         }
     }
 }
